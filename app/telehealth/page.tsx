@@ -3,7 +3,7 @@ import Link from 'next/link'
 import SplitHero from '@/components/SplitHero'
 
 const TITLE = 'Visiting Our Office | Elena Chetver, MD'
-const DESCRIPTION = 'Dr. Elena Chetver\'s office is in Suite 210 at 7531 Santa Monica Blvd., West Hollywood, CA 90046. Phone (323) 650-2991. Directions, hours and what to expect.'
+const DESCRIPTION = 'Dr. Elena Chetver\'s office is in Suite 28 at 7607 Santa Monica Blvd., West Hollywood, CA 90046. Phone (323) 650-2991. Directions, hours and what to expect.'
 export const metadata: Metadata = {
   title: TITLE, description: DESCRIPTION, alternates: { canonical: '/telehealth' },
   openGraph: { title: TITLE, description: DESCRIPTION, url: 'https://elenachetvermd.com/telehealth', siteName: 'Elena Chetver, MD', type: 'website' },

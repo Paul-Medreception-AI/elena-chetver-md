@@ -23,7 +23,7 @@ const facts = [
 export default function AboutPage() {
   return (
     <main>
-      <SplitHero src="/images/stock/hub-about.jpg" alt="A physician in a white coat talking with a patient in an exam room">
+      <SplitHero src="/images/practice/dr-chetver-headshot-wide.jpg" alt="Dr. Elena Chetver" position="50% 50%">
         <nav className="text-sm mb-6 opacity-90"><Link href="/" className="hover:underline">Home</Link><span className="mx-2">›</span><span>About</span></nav>
         <h1 className="font-cormorant text-5xl sm:text-6xl font-light leading-tight">About Dr. Elena Chetver</h1>
         <p className="text-lg sm:text-xl text-white/90 mt-6 leading-relaxed max-w-xl">A solo internist on Santa Monica Boulevard who has looked after West Hollywood adults for decades, in English and in Russian.</p>

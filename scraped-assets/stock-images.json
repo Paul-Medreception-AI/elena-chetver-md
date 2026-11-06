@@ -668,33 +668,6 @@
    "pexels_url": "https://www.pexels.com/photo/a-couple-sleeping-on-the-bed-8972607/"
   },
   {
-   "page": "home",
-   "file": "public/images/stock/hub-home.jpg",
-   "source": "pexels",
-   "alt": "A doctor and patient engaging in a positive consultation in a bright clinic setting.",
-   "pexels_id": 7579831,
-   "photographer": "cottonbro studio",
-   "pexels_url": "https://www.pexels.com/photo/a-doctor-talking-the-patient-7579831/"
-  },
-  {
-   "page": "about",
-   "file": "public/images/stock/hub-about.jpg",
-   "source": "pexels",
-   "alt": "A doctor attentively listens to a patient during a medical consultation, emphasizing care and understanding.",
-   "pexels_id": 5593720,
-   "photographer": "Chokniti Khongchum",
-   "pexels_url": "https://www.pexels.com/photo/a-woman-in-white-lab-gown-5593720/"
-  },
-  {
-   "page": "team",
-   "file": "public/images/stock/hub-team.jpg",
-   "source": "pexels",
-   "alt": "Crutches resting against a wall in a minimalist waiting room with blue chairs.",
-   "pexels_id": 13185365,
-   "photographer": "Juan Manuel Montejano Lopez",
-   "pexels_url": "https://www.pexels.com/photo/crutches-leaning-on-white-wall-13185365/"
-  },
-  {
    "page": "contact",
    "file": "public/images/stock/hub-contact.jpg",
    "source": "pexels",
@@ -783,6 +756,20 @@
    "pexels_id": 8538656,
    "photographer": "https://kaboompics.com/",
    "pexels_url": "https://www.pexels.com/photo/women-wearing-personal-protective-equipment-standing-while-having-a-conversation-8538656/"
+  }
+ ],
+ "practice_photos": [
+  {
+   "file": "public/images/practice/dr-chetver-office.jpg",
+   "source": "the practice (Zocdoc profile photo supplied by Paul 2026-11-05), watermark cropped, 2x upscale"
+  },
+  {
+   "file": "public/images/practice/dr-chetver-headshot.jpg",
+   "source": "the practice (headshot supplied by Paul 2026-11-05)"
+  },
+  {
+   "file": "public/images/practice/dr-chetver-headshot-wide.jpg",
+   "source": "derived from the headshot for the wide hero box"
   }
  ]
 }

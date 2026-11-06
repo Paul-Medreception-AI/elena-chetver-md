@@ -24,6 +24,7 @@ const PRACTICE_LD = {
   address: { '@type': 'PostalAddress', streetAddress: '7531 Santa Monica Blvd., Suite 210', addressLocality: 'West Hollywood', addressRegion: 'CA', postalCode: '90046', addressCountry: 'US' },
   areaServed: 'West Hollywood, CA',
   isAcceptingNewPatients: true,
+  image: 'https://elenachetvermd.com/images/practice/dr-chetver-office.jpg',
   openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '17:00' }],
 }
 
@@ -39,6 +40,7 @@ export const metadata: Metadata = {
     url: 'https://elenachetvermd.com',
     siteName: 'Elena Chetver, MD',
     type: 'website',
+    images: [{ url: '/images/practice/dr-chetver-office.jpg', width: 1350, height: 810, alt: 'Dr. Elena Chetver at her desk' }],
   },
   twitter: {
     card: 'summary',

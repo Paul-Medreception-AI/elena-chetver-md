@@ -38,7 +38,7 @@ const reviews = [
 ]
 
 export default function HomePage() {
-  const heroSrc = '/images/stock/hub-home.jpg'
+  const heroSrc = '/images/practice/dr-chetver-office.jpg'
   return (
     <main className="font-sans">
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] text-white">
@@ -62,7 +62,7 @@ export default function HomePage() {
             <p className="mt-6 text-white/80" lang="ru">Мы говорим по-русски.</p>
           </div>
           <div className="relative h-64 sm:h-80 lg:h-[28rem] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-[var(--color-dark)]">
-            <Image src={heroSrc} alt="A physician talking with a patient across a desk in a medical office" fill priority quality={85} sizes="(max-width: 1024px) 100vw, 600px" className="object-cover" style={{ objectPosition: focus(heroSrc) }} />
+            <Image src={heroSrc} alt="Dr. Elena Chetver at her desk in her West Hollywood office" fill priority quality={85} sizes="(max-width: 1024px) 100vw, 600px" className="object-cover" style={{ objectPosition: focus(heroSrc) }} />
           </div>
         </div>
       </section>

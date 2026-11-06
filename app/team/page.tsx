@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import SplitHero from '@/components/SplitHero'
+import Image from 'next/image'
 
 const TITLE = 'Our Team | Elena Chetver, MD, West Hollywood'
 const DESCRIPTION = 'Meet Dr. Elena Chetver, internal medicine physician, and the bilingual English and Russian staff of her West Hollywood office.'
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 export default function TeamPage() {
   return (
     <main>
-      <SplitHero src="/images/stock/hub-team.jpg" alt="Chairs in a quiet medical office waiting room">
+      <SplitHero src="/images/practice/dr-chetver-office.jpg" alt="Dr. Elena Chetver at her desk in her West Hollywood office">
         <nav className="text-sm mb-6 opacity-90"><Link href="/" className="hover:underline">Home</Link><span className="mx-2">›</span><Link href="/about" className="hover:underline">About</Link><span className="mx-2">›</span><span>Team</span></nav>
         <h1 className="font-cormorant text-5xl sm:text-6xl font-light leading-tight">Our Team</h1>
         <p className="text-lg sm:text-xl text-white/90 mt-6 leading-relaxed max-w-xl">One physician and a small front office that knows patients by name, in English and in Russian.</p>
@@ -22,7 +23,7 @@ export default function TeamPage() {
       <section className="bg-white py-20">
         <div className="max-w-5xl mx-auto px-6">
           <div className="bg-[var(--color-cream)] rounded-2xl border border-[var(--color-border)] p-8 grid gap-8 md:grid-cols-[auto,1fr] items-start">
-            <div className="w-28 h-28 rounded-full bg-[var(--color-light)] text-[var(--color-dark)] flex items-center justify-center font-cormorant text-4xl font-semibold" aria-hidden="true">EC</div>
+            <div className="relative w-36 h-36 rounded-full overflow-hidden ring-4 ring-white shadow-lg"><Image src="/images/practice/dr-chetver-headshot.jpg" alt="Dr. Elena Chetver" fill sizes="144px" className="object-cover" /></div>
             <div>
               <h2 className="font-cormorant text-3xl text-[var(--color-ink)]">Elena Chetver, MD</h2>
               <p className="text-[var(--color-primary)] font-semibold mt-1">Internal Medicine Physician</p>

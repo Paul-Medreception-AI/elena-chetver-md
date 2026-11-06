@@ -45,7 +45,7 @@ export default function ContactPage() {
             </div>
             <div className="bg-[var(--color-cream)] rounded-2xl p-7 border border-[var(--color-border)]">
               <h3 className="font-cormorant text-2xl text-[var(--color-ink)]">Hours</h3>
-              <p className="mt-3 text-[var(--color-ink)]">The office sees patients three days a week. Please call for current hours.</p>
+              <p className="mt-3 text-[var(--color-ink)]">Monday to Friday, 9 am to 5 pm. Closed Saturday and Sunday.</p>
             </div>
             <div className="bg-[var(--color-ink)] text-white rounded-2xl p-7">
               <h3 className="font-cormorant text-2xl" lang="ru">По-русски</h3>

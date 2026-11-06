@@ -167,7 +167,7 @@ export default function HomePage() {
               <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Address</dt><dd className="mt-1"><a href="https://maps.google.com/?q=7531+Santa+Monica+Blvd+Suite+210+West+Hollywood+CA+90046" target="_blank" rel="noopener noreferrer" className="hover:underline">7531 Santa Monica Blvd., Suite 210<br />West Hollywood, CA 90046</a></dd></div>
               <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Phone</dt><dd className="mt-1"><a href="tel:+13236502991" data-ga="phone_click" className="font-semibold hover:underline">(323) 650-2991</a></dd></div>
               <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Fax</dt><dd className="mt-1">(323) 650-2993</dd></div>
-              <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Hours</dt><dd className="mt-1">The office sees patients three days a week. Please call for current hours.</dd></div>
+              <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Hours</dt><dd className="mt-1">Monday to Friday, 9 am to 5 pm. Closed Saturday and Sunday.</dd></div>
             </dl>
           </div>
           <div id="request">

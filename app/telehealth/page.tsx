@@ -26,7 +26,7 @@ export default function VisitingPage() {
         <div className="max-w-6xl mx-auto px-6 grid gap-8 md:grid-cols-3">
           <div className="bg-[var(--color-cream)] rounded-2xl p-7 border border-[var(--color-border)]"><h2 className="font-cormorant text-2xl text-[var(--color-ink)]">Address</h2><p className="mt-3 text-[var(--color-ink)]">7531 Santa Monica Blvd., Suite 210<br />West Hollywood, CA 90046</p><p className="text-[var(--color-muted)] text-sm mt-3">On Santa Monica Boulevard between Fairfax and La Brea. The office is on the second floor.</p></div>
           <div className="bg-[var(--color-cream)] rounded-2xl p-7 border border-[var(--color-border)]"><h2 className="font-cormorant text-2xl text-[var(--color-ink)]">Phone and fax</h2><p className="mt-3"><a href="tel:+13236502991" data-ga="phone_click" className="font-semibold text-[var(--color-ink)] hover:underline">(323) 650-2991</a></p><p className="text-[var(--color-muted)] mt-1">Fax (323) 650-2993</p></div>
-          <div className="bg-[var(--color-cream)] rounded-2xl p-7 border border-[var(--color-border)]"><h2 className="font-cormorant text-2xl text-[var(--color-ink)]">Hours</h2><p className="mt-3 text-[var(--color-ink)]">Patients are seen three days a week. Please call for the current schedule.</p></div>
+          <div className="bg-[var(--color-cream)] rounded-2xl p-7 border border-[var(--color-border)]"><h2 className="font-cormorant text-2xl text-[var(--color-ink)]">Hours</h2><p className="mt-3 text-[var(--color-ink)]">Monday to Friday, 9 am to 5 pm. Closed Saturday and Sunday.</p></div>
         </div>
         <div className="max-w-3xl mx-auto px-6 mt-14">
           <h2 className="font-cormorant text-3xl text-[var(--color-ink)]">What to expect</h2>

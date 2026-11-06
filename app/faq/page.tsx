@@ -14,7 +14,7 @@ const faqs = [
   { q: 'Is Dr. Chetver accepting new patients?', a: 'Yes. Call the office at (323) 650-2991 or send a request through this website and the office will find a time for a first visit.' },
   { q: 'Which insurance plans do you accept?', a: 'The office accepts Medicare and most major plans, including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Anthem and Humana. Plans change, so please call with your card handy and the staff will confirm yours before your visit.' },
   { q: 'Do you speak Russian?', a: 'Yes. Dr. Chetver and the office staff speak Russian and English. Visits, phone calls and paperwork can be handled in either language.' },
-  { q: 'What are your office hours?', a: 'The office sees patients three days a week. Please call for the current schedule.' },
+  { q: 'What are your office hours?', a: 'Monday to Friday, 9 am to 5 pm. Closed Saturday and Sunday. If you are unsure, call before you come.' },
   { q: 'What should I bring to my first visit?', a: 'A photo ID, your insurance card, a list of your current medications or the bottles themselves, and any recent test results or records from a previous doctor. Please arrive a few minutes early for paperwork.' },
   { q: 'How do I request a prescription refill?', a: 'Ask your pharmacy first, since they can send the request to the office directly. You can also call the office with the name of the medication and your pharmacy. Every refill is reviewed by Dr. Chetver before it is sent, so please allow a few business days and do not wait until you are out.' },
   { q: 'Do I need an appointment to be seen?', a: 'Yes, the office sees patients by appointment. Call and the staff will fit you in as soon as they can.' },

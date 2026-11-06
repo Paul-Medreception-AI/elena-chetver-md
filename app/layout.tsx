@@ -24,6 +24,7 @@ const PRACTICE_LD = {
   address: { '@type': 'PostalAddress', streetAddress: '7531 Santa Monica Blvd., Suite 210', addressLocality: 'West Hollywood', addressRegion: 'CA', postalCode: '90046', addressCountry: 'US' },
   areaServed: 'West Hollywood, CA',
   isAcceptingNewPatients: true,
+  openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '17:00' }],
 }
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
@@ -79,7 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <li><a href="https://maps.google.com/?q=7531+Santa+Monica+Blvd+Suite+210+West+Hollywood+CA+90046" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">7531 Santa Monica Blvd., Suite 210<br />West Hollywood, CA 90046</a></li>
                   <li><a href="tel:+13236502991" className="hover:text-white transition-colors">(323) 650-2991</a></li>
                   <li>Fax (323) 650-2993</li>
-                  <li>Office hours: call for current hours</li>
+                  <li>Mon to Fri 9 am to 5 pm</li>
                 </ul>
               </div>
             </div>

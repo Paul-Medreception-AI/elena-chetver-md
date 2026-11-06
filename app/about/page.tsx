@@ -40,7 +40,7 @@ export default function AboutPage() {
             <p>Dr. Chetver is an internal medicine physician, the specialty that cares for adults across the whole range of everyday and long-term health: annual physicals and Medicare wellness visits, blood pressure, cholesterol and diabetes, infections and injuries, and the questions in between. She practises alone, so the doctor you see at your first visit is the one you see at every visit after it.</p>
             <p>She earned her medical degree at the First Moscow State Medical University, one of Russia&apos;s oldest medical schools, and completed her residency in internal medicine at LA County and USC Medical Center. She is board certified by the American Board of Internal Medicine and is affiliated with Cedars-Sinai Medical Center.</p>
             <p>About half of the practice&apos;s patients are Russian speakers. Dr. Chetver and her staff speak Russian and English, and visits, phone calls and paperwork can be handled in either language.</p>
-            <p>The office is in Suite 210 at 7531 Santa Monica Boulevard in West Hollywood and sees patients three days a week. It accepts Medicare and most major plans, and is accepting new patients.</p>
+            <p>The office is in Suite 210 at 7531 Santa Monica Boulevard in West Hollywood, open Monday to Friday from 9 am to 5 pm. It accepts Medicare and most major plans, and is accepting new patients.</p>
             <p className="pt-2"><Link href="/team" className="text-[var(--color-primary)] font-semibold hover:underline">Meet the team →</Link></p>
           </div>
           <aside className="lg:col-span-2">
@@ -57,7 +57,7 @@ export default function AboutPage() {
               <dl className="mt-4 space-y-3 text-[var(--color-ink)]">
                 <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Phone</dt><dd><a href="tel:+13236502991" data-ga="phone_click" className="font-semibold hover:underline">(323) 650-2991</a></dd></div>
                 <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Address</dt><dd>7531 Santa Monica Blvd., Suite 210<br />West Hollywood, CA 90046</dd></div>
-                <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Hours</dt><dd>Three days a week. Call for current hours.</dd></div>
+                <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Hours</dt><dd>Mon to Fri, 9 am to 5 pm</dd></div>
               </dl>
             </div>
           </aside>

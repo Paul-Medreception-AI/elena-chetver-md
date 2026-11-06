@@ -32,7 +32,7 @@ const CARDS: Card[] = [
 export default function ServicesHubPage() {
   return (
     <>
-      <SplitHero src="/images/stock/hub-services.jpg" alt="A physician listening to a patient's chest with a stethoscope">
+      <SplitHero src="/images/stock/hub-services.jpg" alt="Doctor with stethoscope and white coat seated at a clinic desk.">
         <div>
           <nav className="text-sm text-white/70 mb-4" aria-label="Breadcrumb">
             <a href="/" className="hover:underline">Home</a>

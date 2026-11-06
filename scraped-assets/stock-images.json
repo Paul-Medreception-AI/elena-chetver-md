@@ -707,19 +707,19 @@
    "page": "faq",
    "file": "public/images/stock/hub-faq.jpg",
    "source": "pexels",
-   "alt": "A doctor consulting with a patient in an office, discussing a medical chart.",
-   "pexels_id": 7578803,
-   "photographer": "cottonbro studio",
-   "pexels_url": "https://www.pexels.com/photo/man-in-white-dress-shirt-sitting-at-the-table-7578803/"
+   "alt": "Close-up of doctor and patient reviewing medical documents during consultation.",
+   "pexels_id": 39192334,
+   "photographer": "Vitaly Gariev",
+   "pexels_url": "https://www.pexels.com/photo/doctor-discussing-medical-report-with-patient-39192334/"
   },
   {
    "page": "reviews",
    "file": "public/images/stock/hub-reviews.jpg",
    "source": "pexels",
-   "alt": "Two healthcare workers in face masks shaking hands outdoors, promoting teamwork and collaboration.",
-   "pexels_id": 5327578,
-   "photographer": "Thirdman",
-   "pexels_url": "https://www.pexels.com/photo/medical-professionals-wearing-face-masks-while-shaking-hands-with-each-other-5327578/"
+   "alt": "Bright, welcoming clinic reception with patients interacting with staff for registration.",
+   "pexels_id": 7108318,
+   "photographer": "Pavel Danilyuk",
+   "pexels_url": "https://www.pexels.com/photo/couple-during-registration-in-clinic-7108318/"
   },
   {
    "page": "blog",
@@ -734,28 +734,19 @@
    "page": "services",
    "file": "public/images/stock/hub-services.jpg",
    "source": "pexels",
-   "alt": "A female doctor in a white coat using a stethoscope during a patient examination.",
-   "pexels_id": 5327584,
-   "photographer": "Thirdman",
-   "pexels_url": "https://www.pexels.com/photo/photo-of-doctor-checking-on-her-patient-5327584/"
+   "alt": "Doctor with stethoscope and white coat seated at a clinic desk.",
+   "pexels_id": 7578800,
+   "photographer": "cottonbro studio",
+   "pexels_url": "https://www.pexels.com/photo/a-woman-in-white-coat-sitting-at-the-table-7578800/"
   },
   {
    "page": "conditions",
    "file": "public/images/stock/hub-conditions.jpg",
    "source": "pexels",
-   "alt": "Healthcare professional discussing dental treatment with patient using a tablet device in a modern clinic setting.",
-   "pexels_id": 5355693,
-   "photographer": "Tima Miroshnichenko",
-   "pexels_url": "https://www.pexels.com/photo/woman-in-white-scrub-suit-holding-a-tablet-5355693/"
-  },
-  {
-   "page": "russian-speaking-doctor",
-   "file": "public/images/stock/hub-russian.jpg",
-   "source": "pexels",
-   "alt": "Two healthcare professionals in PPE discussing information in a bright lab.",
-   "pexels_id": 8538656,
-   "photographer": "https://kaboompics.com/",
-   "pexels_url": "https://www.pexels.com/photo/women-wearing-personal-protective-equipment-standing-while-having-a-conversation-8538656/"
+   "alt": "Close-up of a medical professional measuring a patient's blood pressure at a clinic.",
+   "pexels_id": 7659564,
+   "photographer": "Thirdman",
+   "pexels_url": "https://www.pexels.com/photo/a-healthcare-worker-measuring-a-patient-s-blood-pressure-using-a-sphygmomanometer-7659564/"
   }
  ],
  "practice_photos": [

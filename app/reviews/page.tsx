@@ -18,7 +18,7 @@ const reviews = [
 export default function ReviewsPage() {
   return (
     <main>
-      <SplitHero src="/images/stock/hub-reviews.jpg" alt="A doctor and a patient shaking hands outside a clinic">
+      <SplitHero src="/images/stock/hub-reviews.jpg" alt="Bright, welcoming clinic reception with patients interacting with staff for registration.">
         <nav className="text-sm mb-6 opacity-90"><Link href="/" className="hover:underline">Home</Link><span className="mx-2">›</span><span>Patient Reviews</span></nav>
         <h1 className="font-cormorant text-5xl sm:text-6xl font-light leading-tight">Patient Reviews</h1>
         <p className="text-lg sm:text-xl text-white/90 mt-6 leading-relaxed max-w-xl">Rated 4.5 out of 5 from 140 verified patient reviews on Zocdoc, with 91% of patients satisfied with their care.</p>

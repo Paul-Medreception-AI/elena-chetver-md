@@ -33,7 +33,7 @@ const CARDS: Card[] = [
 export default function ConditionsHubPage() {
   return (
     <>
-      <SplitHero src="/images/stock/hub-conditions.jpg" alt="A physician explaining results to a patient on a tablet">
+      <SplitHero src="/images/stock/hub-conditions.jpg" alt="Close-up of a medical professional measuring a patient's blood pressure at a clinic.">
         <div>
           <nav className="text-sm text-white/70 mb-4" aria-label="Breadcrumb">
             <a href="/" className="hover:underline">Home</a>

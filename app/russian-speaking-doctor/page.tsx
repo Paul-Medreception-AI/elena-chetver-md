@@ -20,7 +20,7 @@ const ru = [
 export default function RussianPage() {
   return (
     <main lang="ru">
-      <SplitHero src="/images/stock/hub-russian.jpg" alt="A female physician explaining a treatment plan in her office">
+      <SplitHero src="/images/practice/dr-chetver-office.jpg" alt="Доктор Елена Четвер в своём кабинете">
         <nav className="text-sm mb-6 opacity-90"><Link href="/" className="hover:underline">Главная</Link><span className="mx-2">›</span><span>По-русски</span></nav>
         <h1 className="font-cormorant text-5xl sm:text-6xl font-light leading-tight">Русскоговорящий терапевт в Западном Голливуде</h1>
         <p className="text-lg sm:text-xl text-white/90 mt-6 leading-relaxed max-w-xl">Доктор Елена Четвер принимает взрослых пациентов более сорока лет. Приём, звонки и документы на русском и английском языках.</p>

@@ -28,7 +28,7 @@ export default function FaqPage() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <SplitHero src="/images/stock/hub-faq.jpg" alt="A physician answering a patient's questions across a desk">
+      <SplitHero src="/images/stock/hub-faq.jpg" alt="Close-up of doctor and patient reviewing medical documents during consultation.">
         <nav className="text-sm mb-6 opacity-90"><Link href="/" className="hover:underline">Home</Link><span className="mx-2">›</span><span>FAQ</span></nav>
         <h1 className="font-cormorant text-5xl sm:text-6xl font-light leading-tight">Frequently Asked Questions</h1>
         <p className="text-lg sm:text-xl text-white/90 mt-6 leading-relaxed max-w-xl">Insurance, new patients, refills, languages and what to bring. Anything else, call (323) 650-2991.</p>

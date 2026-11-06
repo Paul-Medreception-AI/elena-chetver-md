@@ -21,7 +21,7 @@ const PRACTICE_LD = {
   faxNumber: '+1-323-650-2993',
   medicalSpecialty: 'InternalMedicine',
   availableLanguage: ['English', 'Russian'],
-  address: { '@type': 'PostalAddress', streetAddress: '7531 Santa Monica Blvd., Suite 210', addressLocality: 'West Hollywood', addressRegion: 'CA', postalCode: '90046', addressCountry: 'US' },
+  address: { '@type': 'PostalAddress', streetAddress: '7607 Santa Monica Blvd., Suite 28', addressLocality: 'West Hollywood', addressRegion: 'CA', postalCode: '90046', addressCountry: 'US' },
   areaServed: 'West Hollywood, CA',
   isAcceptingNewPatients: true,
   image: 'https://elenachetvermd.com/images/practice/dr-chetver-office.jpg',
@@ -80,7 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <h3 className="font-cormorant text-lg font-semibold mb-4">Contact</h3>
                 <ul className="space-y-2 text-sm text-white/70">
-                  <li><a href="https://maps.google.com/?q=7531+Santa+Monica+Blvd+Suite+210+West+Hollywood+CA+90046" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">7531 Santa Monica Blvd., Suite 210<br />West Hollywood, CA 90046</a></li>
+                  <li><a href="https://maps.google.com/?q=7607+Santa+Monica+Blvd+Suite+28+West+Hollywood+CA+90046" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">7607 Santa Monica Blvd., Suite 28<br />West Hollywood, CA 90046</a></li>
                   <li><a href="tel:+13236502991" className="hover:text-white transition-colors">(323) 650-2991</a></li>
                   <li>Fax (323) 650-2993</li>
                   <li>Mon to Fri 9 am to 5 pm</li>

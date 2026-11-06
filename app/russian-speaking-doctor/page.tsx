@@ -36,7 +36,7 @@ export default function RussianPage() {
             <h2 className="font-cormorant text-4xl">О докторе</h2>
             <p>Елена Четвер окончила Первый Московский медицинский институт имени Сеченова и прошла резидентуру по терапии в медицинском центре округа Лос-Анджелес и Университета Южной Калифорнии. Она сертифицирована Американским советом по внутренним болезням (American Board of Internal Medicine) и сотрудничает с медицинским центром Cedars-Sinai.</p>
             <p>Около половины пациентов практики говорят по-русски. Доктор и персонал офиса свободно общаются на обоих языках, поэтому вам не понадобится переводчик ни на приёме, ни по телефону.</p>
-            <p>Офис находится на бульваре Санта-Моника, 7531, офис 210, в Западном Голливуде. Приём с понедельника по пятницу с 9:00 до 17:00, по записи. Принимаем новых пациентов.</p>
+            <p>Офис находится на бульваре Санта-Моника, 7607, офис 28, в Западном Голливуде. Приём с понедельника по пятницу с 9:00 до 17:00, по записи. Принимаем новых пациентов.</p>
           </div>
           <aside className="lg:col-span-2 space-y-5">
             {ru.map((x) => (
@@ -49,7 +49,7 @@ export default function RussianPage() {
       <section className="bg-[var(--color-cream)] py-16" lang="en">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="font-cormorant text-3xl text-[var(--color-ink)]">Russian-speaking internal medicine doctor in West Hollywood</h2>
-          <p className="text-[var(--color-muted)] leading-relaxed mt-4">Dr. Elena Chetver, a board-certified internist trained in Moscow and at LA County and USC Medical Center, sees adult patients in Russian and English at 7531 Santa Monica Blvd., Suite 210. The office accepts Medicare and major insurance plans and is accepting new patients. Call (323) 650-2991.</p>
+          <p className="text-[var(--color-muted)] leading-relaxed mt-4">Dr. Elena Chetver, a board-certified internist trained in Moscow and at LA County and USC Medical Center, sees adult patients in Russian and English at 7607 Santa Monica Blvd., Suite 28. The office accepts Medicare and major insurance plans and is accepting new patients. Call (323) 650-2991.</p>
         </div>
       </section>
     </main>

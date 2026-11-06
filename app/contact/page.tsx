@@ -4,7 +4,7 @@ import ContactForm from '@/components/ContactForm'
 import SplitHero from '@/components/SplitHero'
 
 const TITLE = 'Contact | Elena Chetver, MD, West Hollywood'
-const DESCRIPTION = 'Call (323) 650-2991 or send a request to Dr. Elena Chetver\'s office at 7531 Santa Monica Blvd., Suite 210, West Hollywood, CA 90046. English and Russian spoken.'
+const DESCRIPTION = 'Call (323) 650-2991 or send a request to Dr. Elena Chetver\'s office at 7607 Santa Monica Blvd., Suite 28, West Hollywood, CA 90046. English and Russian spoken.'
 export const metadata: Metadata = {
   title: TITLE, description: DESCRIPTION, alternates: { canonical: '/contact' },
   openGraph: { title: TITLE, description: DESCRIPTION, url: 'https://elenachetvermd.com/contact', siteName: 'Elena Chetver, MD', type: 'website' },
@@ -35,8 +35,8 @@ export default function ContactPage() {
           <div className="space-y-6">
             <div className="bg-[var(--color-cream)] rounded-2xl p-7 border border-[var(--color-border)]">
               <h3 className="font-cormorant text-2xl text-[var(--color-ink)]">Visit Us</h3>
-              <p className="mt-3 text-[var(--color-ink)]">7531 Santa Monica Blvd., Suite 210<br />West Hollywood, CA 90046</p>
-              <a href="https://maps.google.com/?q=7531+Santa+Monica+Blvd+Suite+210+West+Hollywood+CA+90046" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-[var(--color-primary)] font-semibold hover:underline">Open in Google Maps →</a>
+              <p className="mt-3 text-[var(--color-ink)]">7607 Santa Monica Blvd., Suite 28<br />West Hollywood, CA 90046</p>
+              <a href="https://maps.google.com/?q=7607+Santa+Monica+Blvd+Suite+28+West+Hollywood+CA+90046" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-[var(--color-primary)] font-semibold hover:underline">Open in Google Maps →</a>
             </div>
             <div className="bg-[var(--color-cream)] rounded-2xl p-7 border border-[var(--color-border)]">
               <h3 className="font-cormorant text-2xl text-[var(--color-ink)]">Call or Fax</h3>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import SplitHero from '@/components/SplitHero'
 
 export const metadata: Metadata = {
   title: 'Back Pain: When Rest Helps and When It Does Not',
@@ -27,24 +28,17 @@ const Check = () => (
 export default function Page() {
   return (
     <main>
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <SplitHero src="/images/stock/blog-back-pain-when-rest-helps-and-when-it-does-not.jpg" alt="A physiotherapist aids a patient in a stretching exercise for rehabilitation.">
+        <div>
           <nav className="text-sm text-white/70 mb-6">
             <a href="/" className="hover:text-white transition-colors">Home</a> › <a href="/blog" className="hover:text-white transition-colors">Resources</a> › Article
           </nav>
           <p className="text-xs uppercase tracking-widest text-white/70 mb-4">Patient Education</p>
-          <h1 className="font-cormorant text-5xl font-light leading-tight max-w-3xl mx-auto text-center">Back Pain: When Rest Helps and When It Does Not</h1>
+          <h1 className="font-cormorant text-5xl font-light leading-tight max-w-3xl">Back Pain: When Rest Helps and When It Does Not</h1>
           <p className="mt-6 text-sm text-white/80">Published November 2026 · 6 min read</p>
         </div>
-      </section>
+      </SplitHero>
 
-      {/* page-image:start */}
-      <div className="max-w-5xl mx-auto px-6 -mt-10 relative z-10">
-        <div className="w-full rounded-2xl overflow-hidden shadow-xl bg-[var(--color-light)]">
-          <img src={"/images/stock/blog-back-pain-when-rest-helps-and-when-it-does-not.jpg"} alt={"A physiotherapist aids a patient in a stretching exercise for rehabilitation."} width={1200} height={627} loading="lazy" className="block w-full h-auto" />
-        </div>
-      </div>
-      {/* page-image:end */}
 
       <article className="bg-white py-20 max-w-3xl mx-auto px-6">
         <p className="text-[var(--color-ink)] leading-loose text-base">

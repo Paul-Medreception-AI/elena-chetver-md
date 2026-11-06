@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import SplitHero from '@/components/SplitHero'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -35,8 +36,8 @@ const rows = [
   },
   {
     label: 'Cost',
-    a: 'Often covered as preventive care by insurance; with a membership model, usually included in the monthly membership fee. Extra tests may carry copays and deductibles.',
-    b: 'Copays and deductibles apply under most insurance plans; in a membership model, visits are typically covered by the monthly membership fee.',
+    a: 'Often covered as preventive care by insurance, with no copay under many plans. Check your plan for what counts as preventive.',
+    b: 'Copays and deductibles apply under most insurance plans. Tests ordered at the visit may be billed separately.',
   },
   {
     label: 'Time commitment',
@@ -84,8 +85,8 @@ function Check() {
 export default function Page() {
   return (
     <main className="text-[var(--color-ink)]">
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white text-center">
-        <div className="mx-auto max-w-4xl px-6">
+      <SplitHero src="/images/stock/compare-annual-physical-vs-symptom-based-visits.jpg" alt="Doctor in protective mask examines patient with stethoscope in medical clinic.">
+        <div>
           <nav className="mb-6 text-sm text-white/80">
             <Link href="/" className="hover:underline">Home</Link> › <span>Resources</span> › <span>Comparison</span>
           </nav>
@@ -95,15 +96,8 @@ export default function Page() {
           </p>
           <p className="mt-4 text-sm text-white/70">By Elena Chetver, MD · November 2026</p>
         </div>
-      </section>
+      </SplitHero>
 
-      {/* page-image:start */}
-      <div className="max-w-5xl mx-auto px-6 -mt-10 relative z-10">
-        <div className="w-full rounded-2xl overflow-hidden shadow-xl bg-[var(--color-light)]">
-          <img src={"/images/stock/compare-annual-physical-vs-symptom-based-visits.jpg"} alt={"A doctor uses a stethoscope to examine a young boy with his mother present in a medical office."} width={1200} height={627} loading="lazy" className="block w-full h-auto" />
-        </div>
-      </div>
-      {/* page-image:end */}
 
       <section className="bg-[var(--color-cream)] py-24">
         <div className="mx-auto max-w-4xl px-6">

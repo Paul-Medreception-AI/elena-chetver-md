@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import SplitHero from '@/components/SplitHero'
 
 export const metadata: Metadata = {
   title: 'Questions to Ask When Choosing a Primary Care Doctor',
@@ -50,26 +51,19 @@ const tips3 = [
 export default function Page() {
   return (
     <main>
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <SplitHero src="/images/stock/blog-questions-to-ask-when-choosing-a-primary-care-doctor.jpg" alt="A doctor shakes hands with a smiling patient during a consultation in a bright, welcoming environment.">
+        <div>
           <nav className="text-sm text-white/70 mb-6">
             <a href="/" className="hover:text-white transition-colors">Home</a> › <a href="/blog" className="hover:text-white transition-colors">Resources</a> › Article
           </nav>
           <p className="text-xs uppercase tracking-widest text-white/70 mb-4">Patient Education</p>
-          <h1 className="font-cormorant text-5xl font-light leading-tight max-w-3xl mx-auto text-center">
+          <h1 className="font-cormorant text-5xl font-light leading-tight max-w-3xl">
             Questions to Ask When Choosing a Primary Care Doctor
           </h1>
           <p className="mt-6 text-sm text-white/70">Published November 2026 · 6 min read</p>
         </div>
-      </section>
+      </SplitHero>
 
-      {/* page-image:start */}
-      <div className="max-w-5xl mx-auto px-6 -mt-10 relative z-10">
-        <div className="w-full rounded-2xl overflow-hidden shadow-xl bg-[var(--color-light)]">
-          <img src={"/images/stock/blog-questions-to-ask-when-choosing-a-primary-care-doctor.jpg"} alt={"Close-up of a magnifying glass focusing on the phrase 'Frequently Asked Questions'."} width={1200} height={627} loading="lazy" className="block w-full h-auto" />
-        </div>
-      </div>
-      {/* page-image:end */}
 
       <article className="bg-white py-20 max-w-3xl mx-auto px-6">
         <p className="text-[var(--color-ink)] leading-loose text-base">
@@ -116,7 +110,7 @@ export default function Page() {
 
         <h2 className="font-cormorant text-3xl text-[var(--color-ink)] mt-12 mb-4">Questions about cost and logistics</h2>
         <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-          Money is an uncomfortable topic, but surprises are worse. Practices vary widely in how they are structured, including traditional insurance-based models and direct primary care, where patients have a more direct relationship with the practice. Ask plainly so you understand what you are signing up for.
+          Money is an uncomfortable topic, but surprises are worse. Practices vary in which plans they accept and how billing works. Ask plainly so you understand what you are signing up for.
         </p>
         <ul className="space-y-3">
           {tips3.map((t) => (

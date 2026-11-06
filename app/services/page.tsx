@@ -2,6 +2,7 @@
 // mapped from lib/data/services.ts, so a page added there (including by the silo
 // builder's data_append) appears here without editing this file.
 import type { Metadata } from 'next'
+import SplitHero from '@/components/SplitHero'
 import { SERVICES } from '../../lib/data/services'
 
 const TITLE = "Services | Elena Chetver, MD"
@@ -31,17 +32,17 @@ const CARDS: Card[] = [
 export default function ServicesHubPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
+      <SplitHero src="/images/stock/hub-services.jpg" alt="A physician listening to a patient's chest with a stethoscope">
+        <div>
           <nav className="text-sm text-white/70 mb-4" aria-label="Breadcrumb">
             <a href="/" className="hover:underline">Home</a>
             <span className="mx-2">›</span>
             <span>Services</span>
           </nav>
           <h1 className="font-cormorant text-5xl md:text-6xl font-light">{HEADING}</h1>
-          <p className="text-xl text-white/85 max-w-2xl mx-auto mt-4 leading-relaxed">{SUBHEADING}</p>
+          <p className="text-xl text-white/85 max-w-2xl mt-4 leading-relaxed">{SUBHEADING}</p>
         </div>
-      </section>
+      </SplitHero>
 
       <section className="bg-[var(--color-cream)] py-20">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

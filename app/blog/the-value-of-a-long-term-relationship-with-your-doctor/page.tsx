@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import SplitHero from '@/components/SplitHero'
 
 export const metadata: Metadata = {
   title: 'The Value of a Long-Term Relationship With Your Doctor',
@@ -36,24 +37,17 @@ const related = [
 export default function Page() {
   return (
     <main>
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <SplitHero src="/images/stock/blog-the-value-of-a-long-term-relationship-with-your-doctor.jpg" alt="Nurse uses digital tablet for patient consultation and diagnosis in a clinical setting.">
+        <div>
           <nav className="text-sm text-white/70 mb-6">
             <a href="/" className="hover:text-white">Home</a> › <a href="/blog" className="hover:text-white">Resources</a> › Article
           </nav>
           <p className="text-xs uppercase tracking-widest text-white/70 mb-4">Patient Education</p>
-          <h1 className="font-cormorant text-5xl font-light leading-tight max-w-3xl mx-auto text-center">The Value of a Long-Term Relationship With Your Doctor</h1>
+          <h1 className="font-cormorant text-5xl font-light leading-tight max-w-3xl">The Value of a Long-Term Relationship With Your Doctor</h1>
           <p className="mt-6 text-sm text-white/70">Published November 2026 · 6 min read</p>
         </div>
-      </section>
+      </SplitHero>
 
-      {/* page-image:start */}
-      <div className="max-w-5xl mx-auto px-6 -mt-10 relative z-10">
-        <div className="w-full rounded-2xl overflow-hidden shadow-xl bg-[var(--color-light)]">
-          <img src={"/images/stock/blog-the-value-of-a-long-term-relationship-with-your-doctor.jpg"} alt={"A close-up of wooden 'Value' letters placed on a dark marble background, emphasizing texture and concept."} width={1200} height={627} loading="lazy" className="block w-full h-auto" />
-        </div>
-      </div>
-      {/* page-image:end */}
 
       <article className="bg-white py-20 max-w-3xl mx-auto px-6">
         <p className="text-[var(--color-ink)] leading-loose text-base">Think about the last time you had to explain your entire health history to a stranger while a clock ticked in the background. Now imagine sitting across from someone who already knows your story, remembers what matters to you, and notices when something is off. That difference is the heart of a long-term relationship with your doctor, and it shapes your health in ways that are easy to overlook.</p>

@@ -3,29 +3,46 @@ import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import './globals.css'
 import Script from 'next/script'
 import SiteHeader from '../components/SiteHeader'
+import Track from '../components/Track'
+import MobileCallBar from '../components/MobileCallBar'
 
 import { GoogleAnalytics } from '@next/third-parties/google'
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300','400','500','600','700'], variable: '--font-cormorant' })
 const dmSans = DM_Sans({ subsets: ['latin'], weight: ['300','400','500','600'], variable: '--font-dm-sans' })
 
 
+const PRACTICE_LD = {
+  '@context': 'https://schema.org',
+  '@type': ['MedicalClinic', 'Physician'],
+  name: 'Elena Chetver, MD',
+  legalName: 'Elena Chetver, M.D.',
+  url: 'https://elenachetvermd.com',
+  telephone: '+1-323-650-2991',
+  faxNumber: '+1-323-650-2993',
+  medicalSpecialty: 'InternalMedicine',
+  availableLanguage: ['English', 'Russian'],
+  address: { '@type': 'PostalAddress', streetAddress: '7531 Santa Monica Blvd., Suite 210', addressLocality: 'West Hollywood', addressRegion: 'CA', postalCode: '90046', addressCountry: 'US' },
+  areaServed: 'West Hollywood, CA',
+  isAcceptingNewPatients: true,
+}
+
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 export const metadata: Metadata = {
-  title: 'Elena Chetver, MD | Unhurried Primary Care Built Around You',
-  description: 'Dr. Elena Chetver offers a direct primary care model that puts the patient relationship first. Expect thoughtful visits, clear answers, and a physician who knows your whole health story.',
+  title: 'Internal Medicine in West Hollywood, CA | Elena Chetver, MD',
+  description: 'Dr. Elena Chetver is a board-certified internal medicine physician in West Hollywood, CA, caring for adults for over 40 years. English and Russian spoken. Medicare and major plans accepted.',
   metadataBase: new URL('https://elenachetvermd.com'),
   openGraph: {
-    title: 'Elena Chetver, MD | Unhurried Primary Care Built Around You',
-    description: 'Dr. Elena Chetver offers a direct primary care model that puts the patient relationship first. Expect thoughtful visits, clear answers, and a physician who knows your whole health story.',
+    title: 'Internal Medicine in West Hollywood, CA | Elena Chetver, MD',
+    description: 'Dr. Elena Chetver is a board-certified internal medicine physician in West Hollywood, CA, caring for adults for over 40 years. English and Russian spoken. Medicare and major plans accepted.',
     url: 'https://elenachetvermd.com',
     siteName: 'Elena Chetver, MD',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'Elena Chetver, MD | Unhurried Primary Care Built Around You',
-    description: 'Dr. Elena Chetver offers a direct primary care model that puts the patient relationship first. Expect thoughtful visits, clear answers, and a physician who knows your whole health story.',
+    title: 'Internal Medicine in West Hollywood, CA | Elena Chetver, MD',
+    description: 'Dr. Elena Chetver is a board-certified internal medicine physician in West Hollywood, CA, caring for adults for over 40 years. English and Russian spoken. Medicare and major plans accepted.',
   },
 }
 
@@ -33,6 +50,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
       <body className="font-[family-name:var(--font-dm-sans)] bg-[var(--color-cream)] text-[var(--color-ink)]">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(PRACTICE_LD) }} />
+        <Track />
         <SiteHeader />
         <main>{children}</main>
         <footer className="bg-[var(--color-ink)] text-white py-16">
@@ -41,7 +60,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div>
                 <span className="font-cormorant text-2xl font-semibold text-white">Elena Chetver, MD</span>
-                <p className="mt-4 text-sm text-white/70 max-w-xs">Thoughtful, personal primary care with Dr. Elena Chetver.</p>
+                <p className="mt-4 text-sm text-white/70 max-w-xs">Internal medicine and primary care for adults in West Hollywood since the 1990s.</p>
+                <p className="mt-3 text-sm text-white/70 max-w-xs" lang="ru">Мы говорим по-русски.</p>
               </div>
               <div>
                 <h3 className="font-cormorant text-lg font-semibold mb-4">Quick Links</h3>
@@ -56,10 +76,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <h3 className="font-cormorant text-lg font-semibold mb-4">Contact</h3>
                 <ul className="space-y-2 text-sm text-white/70">
-                  <li>[Address to be added]</li>
-                  <li>[Phone to be added]</li>
-                  <li>[Email to be added]</li>
-                  <li>[Hours to be added]</li>
+                  <li><a href="https://maps.google.com/?q=7531+Santa+Monica+Blvd+Suite+210+West+Hollywood+CA+90046" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">7531 Santa Monica Blvd., Suite 210<br />West Hollywood, CA 90046</a></li>
+                  <li><a href="tel:+13236502991" className="hover:text-white transition-colors">(323) 650-2991</a></li>
+                  <li>Fax (323) 650-2993</li>
+                  <li>Office hours: call for current hours</li>
                 </ul>
               </div>
             </div>
@@ -83,6 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {/* site-credits:end */}
           </div>
         </footer>
+        <MobileCallBar />
         {/* MedReception patient widget: callback, appointment request and the AI chat, filed on
             the practice's Studio board (qa-api lambdaWidget, client id elena-chetver-md). */}
         <Script src="https://widget.medreception.ai/embed.js" data-client-id="elena-chetver-md" strategy="afterInteractive" />

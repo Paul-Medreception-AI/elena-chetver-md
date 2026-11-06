@@ -1,137 +1,74 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import SplitHero from '@/components/SplitHero'
 
+const TITLE = 'About Dr. Elena Chetver | Internist in West Hollywood'
+const DESCRIPTION = 'Dr. Elena Chetver is a board-certified internal medicine physician in West Hollywood, CA, trained in Moscow and at LA County and USC Medical Center, caring for adults for over 40 years in English and Russian.'
 export const metadata: Metadata = {
-  title: 'About Dr. Elena Chetver | Primary Care',
-  description: 'Learn about Dr. Elena Chetver and a direct primary care practice in West Hollywood, CA built on listening, clear answers, and lasting relationships.',
-  alternates: { canonical: '/about' },
-  openGraph: {
-    title: 'About Dr. Elena Chetver | Primary Care',
-    description: 'Learn about Dr. Elena Chetver and a direct primary care practice in West Hollywood, CA built on listening, clear answers, and lasting relationships.',
-    url: 'https://elenachetvermd.com/about',
-    siteName: 'Elena Chetver, MD',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary',
-    title: 'About Dr. Elena Chetver | Primary Care',
-    description: 'Learn about Dr. Elena Chetver and a direct primary care practice in West Hollywood, CA built on listening, clear answers, and lasting relationships.',
-  },
+  title: TITLE, description: DESCRIPTION, alternates: { canonical: '/about' },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: 'https://elenachetvermd.com/about', siteName: 'Elena Chetver, MD', type: 'website' },
+  twitter: { card: 'summary', title: TITLE, description: DESCRIPTION },
 }
 
-const values = [
-  {
-    title: 'Time to Listen',
-    description:
-      'Visits are unhurried so your concerns are fully heard. Good questions deserve thoughtful answers, and nothing is rushed.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Evidence With Respect',
-    description:
-      'Recommendations are grounded in sound medical evidence. They are always shaped by your values, preferences, and circumstances.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Lasting Continuity',
-    description:
-      'You see the same physician who knows your whole health story. That continuity helps care stay connected as your life changes.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-      </svg>
-    ),
-  },
+const facts = [
+  { label: 'Specialty', value: 'Internal medicine, adult primary care' },
+  { label: 'Medical school', value: 'First Moscow State Medical University (Sechenov)' },
+  { label: 'Residency', value: 'Internal medicine, LA County and USC Medical Center' },
+  { label: 'Board certification', value: 'American Board of Internal Medicine' },
+  { label: 'Hospital affiliation', value: 'Cedars-Sinai Medical Center' },
+  { label: 'Languages', value: 'English and Russian' },
+  { label: 'In practice', value: 'Over 40 years' },
 ]
 
 export default function AboutPage() {
   return (
     <main>
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-28 text-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <nav className="text-sm text-white/70 mb-6">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <span className="mx-2">›</span>
-            <span className="text-white">About</span>
-          </nav>
-          <h1 className="font-cormorant text-6xl font-light">Medicine Rooted in Relationship and Trust</h1>
-          <p className="text-xl text-white/80 mt-4 max-w-2xl">
-            A direct primary care practice in West Hollywood, CA focused on thoughtful visits and clear answers.
-          </p>
+      <SplitHero src="/images/stock/hub-about.jpg" alt="A physician in a white coat talking with a patient in an exam room">
+        <nav className="text-sm mb-6 opacity-90"><Link href="/" className="hover:underline">Home</Link><span className="mx-2">›</span><span>About</span></nav>
+        <h1 className="font-cormorant text-5xl sm:text-6xl font-light leading-tight">About Dr. Elena Chetver</h1>
+        <p className="text-lg sm:text-xl text-white/90 mt-6 leading-relaxed max-w-xl">A solo internist on Santa Monica Boulevard who has looked after West Hollywood adults for decades, in English and in Russian.</p>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link href="/contact" data-ga="consultation_click" className="bg-white text-[var(--color-dark)] px-7 py-3.5 rounded-xl font-bold shadow-xl">Request an Appointment</Link>
+          <a href="tel:+13236502991" data-ga="phone_click" className="border-2 border-white text-white px-7 py-3.5 rounded-xl font-semibold">Call (323) 650-2991</a>
         </div>
-      </section>
+      </SplitHero>
 
-      <section className="bg-[var(--color-cream)] py-24">
-        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-3 lg:pr-12 space-y-6 text-lg leading-relaxed text-[var(--color-ink)]">
-            <p>Dr. Elena Chetver founded her practice on the belief that good medicine begins with listening. The direct primary care model allows for visits that are not rushed, so questions get answered and concerns are fully explored.</p>
-            <p>Her approach combines evidence-based medicine with respect for each patient&apos;s values, preferences, and circumstances. Care plans are built together, explained clearly, and adjusted as your life and health change.</p>
-            <p>By keeping the practice focused on individual relationships, Dr. Chetver can offer continuity that is hard to find elsewhere. Patients know who is caring for them, and she knows them in return.</p>
+      <section className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-6 grid gap-12 lg:grid-cols-5">
+          <div className="lg:col-span-3 space-y-5 text-[var(--color-ink)] leading-relaxed">
+            <h2 className="font-cormorant text-4xl">A physician who knows your whole history</h2>
+            <p>Dr. Chetver is an internal medicine physician, the specialty that cares for adults across the whole range of everyday and long-term health: annual physicals and Medicare wellness visits, blood pressure, cholesterol and diabetes, infections and injuries, and the questions in between. She practises alone, so the doctor you see at your first visit is the one you see at every visit after it.</p>
+            <p>She earned her medical degree at the First Moscow State Medical University, one of Russia&apos;s oldest medical schools, and completed her residency in internal medicine at LA County and USC Medical Center. She is board certified by the American Board of Internal Medicine and is affiliated with Cedars-Sinai Medical Center.</p>
+            <p>About half of the practice&apos;s patients are Russian speakers. Dr. Chetver and her staff speak Russian and English, and visits, phone calls and paperwork can be handled in either language.</p>
+            <p>The office is in Suite 210 at 7531 Santa Monica Boulevard in West Hollywood and sees patients three days a week. It accepts Medicare and most major plans, and is accepting new patients.</p>
+            <p className="pt-2"><Link href="/team" className="text-[var(--color-primary)] font-semibold hover:underline">Meet the team →</Link></p>
           </div>
-
           <aside className="lg:col-span-2">
-            <div className="animate-fade-up bg-white rounded-2xl p-8 border border-[var(--color-border)]">
-              <h2 className="font-cormorant text-3xl text-[var(--color-primary)] mb-6">Visit Us</h2>
-              <dl className="space-y-4 text-[var(--color-ink)]">
-                <div>
-                  <dt className="text-sm text-[var(--color-muted)]">Phone</dt>
-                  <dd>[Phone to be added]</dd>
-                </div>
-                <div>
-                  <dt className="text-sm text-[var(--color-muted)]">Address</dt>
-                  <dd>[Address to be added]</dd>
-                </div>
-                <div>
-                  <dt className="text-sm text-[var(--color-muted)]">Hours</dt>
-                  <dd>[Hours to be added]</dd>
-                </div>
+            <div className="bg-[var(--color-cream)] rounded-2xl p-7 border border-[var(--color-border)]">
+              <h2 className="font-cormorant text-2xl text-[var(--color-ink)]">At a glance</h2>
+              <dl className="mt-5 space-y-4">
+                {facts.map((f) => (
+                  <div key={f.label}><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">{f.label}</dt><dd className="text-[var(--color-ink)] mt-1">{f.value}</dd></div>
+                ))}
               </dl>
-              <Link
-                href="/contact"
-                className="mt-8 inline-block rounded-full bg-[var(--color-accent)] px-8 py-3 text-white font-medium hover:bg-[var(--color-accent-dark)] transition-colors"
-              >
-                Contact the Office
-              </Link>
+            </div>
+            <div className="bg-white rounded-2xl p-7 border border-[var(--color-border)] mt-6">
+              <h2 className="font-cormorant text-2xl text-[var(--color-ink)]">Visit us</h2>
+              <dl className="mt-4 space-y-3 text-[var(--color-ink)]">
+                <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Phone</dt><dd><a href="tel:+13236502991" data-ga="phone_click" className="font-semibold hover:underline">(323) 650-2991</a></dd></div>
+                <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Address</dt><dd>7531 Santa Monica Blvd., Suite 210<br />West Hollywood, CA 90046</dd></div>
+                <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Hours</dt><dd>Three days a week. Call for current hours.</dd></div>
+              </dl>
             </div>
           </aside>
         </div>
       </section>
 
-      <section className="bg-white py-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="font-cormorant text-4xl text-center mb-16 text-[var(--color-primary)]">Our Approach</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {values.map((v) => (
-              <div
-                key={v.title}
-                className="animate-fade-up bg-[var(--color-cream)] rounded-2xl p-8 border border-[var(--color-border)] hover:shadow-lg transition-shadow"
-              >
-                <div className="text-[var(--color-accent)] mb-4">{v.icon}</div>
-                <h3 className="font-cormorant text-xl font-bold text-[var(--color-dark)] mb-3">{v.title}</h3>
-                <p className="text-[var(--color-muted)] leading-relaxed">{v.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-cormorant text-4xl font-light mb-8">Ready to Get Started?</h2>
-          <Link
-            href="/contact"
-            className="inline-block rounded-full bg-white px-10 py-3 font-medium text-[var(--color-dark)] hover:bg-[var(--color-light)] transition-colors"
-          >
-            Schedule a Visit
-          </Link>
+      <section className="bg-[var(--color-ink)] text-white py-16">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="font-cormorant text-4xl" lang="ru">О докторе Елене Четвер</h2>
+          <p className="text-white/80 leading-relaxed mt-4" lang="ru">Доктор Четвер окончила Первый Московский медицинский институт имени Сеченова и прошла резидентуру по терапии в медицинском центре округа Лос-Анджелес и Университета Южной Калифорнии. Более сорока лет она принимает взрослых пациентов в Западном Голливуде. Приём ведётся на русском и английском языках.</p>
+          <Link href="/russian-speaking-doctor" className="inline-block mt-6 text-white font-semibold underline underline-offset-4">Подробнее →</Link>
         </div>
       </section>
     </main>

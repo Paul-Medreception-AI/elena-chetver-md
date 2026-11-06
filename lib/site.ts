@@ -12,9 +12,9 @@ export const SITE: {
   behavioralHealth: boolean
 } = {
   name: "Elena Chetver, MD",
-  legalName: null,
-  phone: null,
-  phoneHref: null,
+  legalName: "Elena Chetver, M.D.",
+  phone: "(323) 650-2991",
+  phoneHref: "tel:+13236502991",
   email: null,
   domain: "elenachetvermd.com",
   origins: ["https://elenachetvermd.com","https://www.elenachetvermd.com"],

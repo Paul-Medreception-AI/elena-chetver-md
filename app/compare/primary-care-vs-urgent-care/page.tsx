@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import SplitHero from '@/components/SplitHero'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 const rows = [
   { label: 'Effectiveness', a: 'Strongest for ongoing conditions, prevention and follow-up, because one clinician knows your history over time.', b: 'Effective for one-time, minor problems such as a sprain, minor cut or simple infection. Little follow-up.' },
   { label: 'Side effects and risks', a: 'Medication choices are made with your full history in view, which helps reduce interactions and duplicate treatment.', b: 'Prescribers may not see your full record, so there is a greater chance of missed interactions or repeated testing.' },
-  { label: 'Cost', a: 'Depends on the model. Direct primary care typically uses a monthly membership fee; traditional primary care bills insurance, and copays and deductibles apply.', b: 'Usually billed per visit, and copays and deductibles apply. Costs can vary widely by facility and services.' },
+  { label: 'Cost', a: 'Billed to your insurance, with copays and deductibles as your plan sets them. Office visits are generally the lower-cost option for non-emergency care.', b: 'Usually billed per visit, and copays and deductibles apply. Costs can vary widely by facility and services.' },
   { label: 'Time commitment', a: 'Scheduled ahead. Visits are often longer when the practice keeps its schedule less crowded.', b: 'Walk-in style, but waits vary with how busy the clinic is. Visits tend to be brief.' },
   { label: 'Best for', a: 'Chronic conditions, preventive care, new symptoms that are not urgent, medication management and care coordination.', b: 'Sudden minor illness or injury when you cannot reach your regular clinician, or after-hours needs.' },
 ]
@@ -59,23 +60,16 @@ const check = (
 export default function Page() {
   return (
     <main>
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
+      <SplitHero src="/images/stock/compare-primary-care-vs-urgent-care.jpg" alt="A medical professional checking a patient's blood pressure using a sphygmomanometer in a cozy setting.">
+        <div>
           <nav className="text-sm mb-6 text-white/80">
             <Link href="/" className="hover:underline">Home</Link> › <span>Resources</span> › <span>Comparison</span>
           </nav>
           <h1 className="font-cormorant text-5xl font-light">Primary Care Visit vs Urgent Care: Where Should You Go?</h1>
-          <p className="mt-6 text-lg text-white/90 max-w-2xl mx-auto">A clear look at how each option works, so you can choose well when something comes up in West Hollywood, CA or anywhere else.</p>
+          <p className="mt-6 text-lg text-white/90 max-w-2xl">A clear look at how each option works, so you can choose well when something comes up in West Hollywood, CA or anywhere else.</p>
         </div>
-      </section>
+      </SplitHero>
 
-      {/* page-image:start */}
-      <div className="max-w-5xl mx-auto px-6 -mt-10 relative z-10">
-        <div className="w-full rounded-2xl overflow-hidden shadow-xl bg-[var(--color-light)]">
-          <img src={"/images/stock/compare-primary-care-vs-urgent-care.jpg"} alt={"A medical professional checking a patient's blood pressure using a sphygmomanometer in a cozy setting."} width={1200} height={627} loading="lazy" className="block w-full h-auto" />
-        </div>
-      </div>
-      {/* page-image:end */}
 
       <section className="bg-[var(--color-cream)] py-24">
         <div className="max-w-4xl mx-auto px-6">

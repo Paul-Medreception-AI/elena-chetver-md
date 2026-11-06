@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import SplitHero from '@/components/SplitHero'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 const rows = [
   { label: 'Effectiveness', a: 'Very effective for common conditions, prevention, and sorting out symptoms that are not yet diagnosed. Coordinates your overall care.', b: 'Most effective once a diagnosis is known or a problem clearly falls within one organ system or disease area.' },
   { label: 'Side effects and risks', a: 'Tends to favor conservative first steps and avoids unnecessary tests or procedures. Reviews all medications together.', b: 'May recommend more specialized tests, procedures or drugs, which carry their own risks. Focus is narrower, so overall medication review can be missed.' },
-  { label: 'Cost', a: 'Depends on the care model: copays and deductibles apply with insurance-based care, while direct primary care uses a monthly membership fee.', b: 'Copays and deductibles typically apply, and some plans require a referral. Added testing or procedures can increase the total.' },
+  { label: 'Cost', a: 'Copays and deductibles apply as your plan sets them, and a primary care visit is usually the lower-cost first step.', b: 'Copays and deductibles typically apply, and some plans require a referral. Added testing or procedures can increase the total.' },
   { label: 'Time commitment', a: 'Often one visit to evaluate a problem, with ongoing relationship visits over time.', b: 'Wait times for a first appointment can be longer, and care may involve several visits and tests.' },
   { label: 'Best for', a: 'New symptoms, checkups, chronic disease management, prevention, and deciding who else you need.', b: 'A known or strongly suspected condition needing expert-level evaluation or procedures.' },
 ]
@@ -59,23 +60,16 @@ const Check = () => (
 export default function Page() {
   return (
     <main className="bg-white text-[var(--color-ink)]">
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
+      <SplitHero src="/images/stock/compare-primary-care-physician-vs-specialist.jpg" alt="Close-up of a female doctor holding a blue stethoscope, emphasizing healthcare and professionalism.">
+        <div>
           <nav className="text-sm mb-6 text-white/80">
             <Link href="/" className="hover:underline">Home</Link> › <span>Resources</span> › <span>Comparison</span>
           </nav>
           <h1 className="font-cormorant text-5xl font-light">Primary Care Physician vs Specialist: Who Should You See First?</h1>
           <p className="mt-6 text-lg text-white/90">A clear guide to choosing where to start, so you get the right care without extra steps.</p>
         </div>
-      </section>
+      </SplitHero>
 
-      {/* page-image:start */}
-      <div className="max-w-5xl mx-auto px-6 -mt-10 relative z-10">
-        <div className="w-full rounded-2xl overflow-hidden shadow-xl bg-[var(--color-light)]">
-          <img src={"/images/stock/compare-primary-care-physician-vs-specialist.jpg"} alt={"Close-up of a female doctor holding a blue stethoscope, emphasizing healthcare and professionalism."} width={1200} height={627} loading="lazy" className="block w-full h-auto" />
-        </div>
-      </div>
-      {/* page-image:end */}
 
       <section className="bg-[var(--color-cream)] py-24">
         <div className="max-w-4xl mx-auto px-6">

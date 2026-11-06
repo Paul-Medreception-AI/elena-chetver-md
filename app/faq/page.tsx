@@ -1,141 +1,55 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import SplitHero from '@/components/SplitHero'
 
+const TITLE = 'FAQ | Elena Chetver, MD, West Hollywood'
+const DESCRIPTION = 'Answers to common questions about Dr. Elena Chetver\'s internal medicine office in West Hollywood: insurance, new patients, refills, languages, hours and what to bring.'
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions | Elena Chetver, MD',
-  description: 'Answers to common questions about direct primary care with Elena Chetver, MD in West Hollywood, CA, including visits, medications, referrals and more.',
-  alternates: { canonical: '/faq' },
-  openGraph: {
-    title: 'Frequently Asked Questions | Elena Chetver, MD',
-    description: 'Answers to common questions about direct primary care with Elena Chetver, MD in West Hollywood, CA, including visits, medications, referrals and more.',
-    url: 'https://elenachetvermd.com/faq',
-    siteName: 'Elena Chetver, MD',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary',
-    title: 'Frequently Asked Questions | Elena Chetver, MD',
-    description: 'Answers to common questions about direct primary care with Elena Chetver, MD in West Hollywood, CA, including visits, medications, referrals and more.',
-  },
+  title: TITLE, description: DESCRIPTION, alternates: { canonical: '/faq' },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: 'https://elenachetvermd.com/faq', siteName: 'Elena Chetver, MD', type: 'website' },
+  twitter: { card: 'summary', title: TITLE, description: DESCRIPTION },
 }
 
 const faqs = [
-  {
-    q: 'What is direct primary care?',
-    a: 'Direct primary care is a model that centers on the relationship between you and your physician. Rather than rushing through short appointments, the model is built to allow time for thoughtful visits and clear communication. Dr. Chetver uses this approach so that she knows your whole health story. Call the office to learn how the model works in practice.',
-  },
-  {
-    q: 'Who is Dr. Elena Chetver?',
-    a: 'Dr. Elena Chetver is the physician behind the practice in West Hollywood, CA. She provides primary care for adults with an emphasis on listening, evidence-based decisions, and plain-language explanations. You can read more on the About page. Patients see their own physician rather than a rotating cast of providers.',
-  },
-  {
-    q: 'Are you accepting new patients?',
-    a: 'The best way to find out is to contact the office directly. You can use the contact form or call the office and ask about availability. We are happy to explain how the practice works and answer your questions before you decide anything. There is no pressure to commit during that first conversation.',
-  },
-  {
-    q: 'Do you accept insurance?',
-    a: 'Insurance details are best confirmed directly with the office, since arrangements can vary. Please call the office to ask how insurance relates to your care and what to expect. It is also helpful to ask your insurer how they treat direct primary care and any outside services such as labs, imaging or specialists. We will gladly help you sort through the questions.',
-  },
-  {
-    q: 'What does membership or care cost?',
-    a: 'We do not post fees on this website. Costs are best discussed directly so that you receive accurate, current information. Please call the office and we will explain what is involved. You are welcome to ask any financial questions before scheduling your first visit.',
-  },
-  {
-    q: 'What should I expect at my first visit?',
-    a: 'Your first visit is a thorough conversation about your medical history, current concerns, and health goals. There is time to ask anything you like, and nothing is rushed. Bringing a list of medications, supplements, and past records is very helpful. Together you will outline a care plan that fits you.',
-  },
-  {
-    q: 'How do I schedule an appointment?',
-    a: 'Reach out through the contact page or call the office to request a visit or an introductory conversation. We will explain how the practice works and help you find a time. If you are unsure which service fits your needs, choose General Question on the form and we will point you in the right direction.',
-  },
-  {
-    q: 'What types of care do you provide?',
-    a: 'The practice offers comprehensive primary care for adults, preventive care and wellness, chronic disease management, acute illness visits, care coordination, and medication review. This means one physician can look after routine checkups, ongoing conditions, and sudden problems. Visit the Services page for more detail on each area.',
-  },
-  {
-    q: 'Can you help manage chronic conditions?',
-    a: 'Yes. The practice supports conditions such as hypertension, diabetes, and thyroid disorders with regular follow-up. Care plans are reviewed over time so they stay current and effective. Because your physician knows your history, adjustments can be made thoughtfully as your health changes.',
-  },
-  {
-    q: 'What if I get sick and need to be seen quickly?',
-    a: 'Acute illness visits address infections, injuries, and sudden symptoms, and your own physician evaluates the problem and guides next steps. Call the office to ask about the best way to arrange a timely visit. For emergencies such as chest pain, trouble breathing, stroke symptoms, or severe injury, call 911 or go to the nearest emergency department.',
-  },
-  {
-    q: 'Can you manage and refill my medications?',
-    a: 'Medication review is a core part of the practice. Dr. Chetver reviews your prescriptions and supplements to confirm they are necessary and safe together, and she explains each choice in plain language. Bring everything you take to your first visit, including over-the-counter products. Questions about specific refills are best directed to the office.',
-  },
-  {
-    q: 'Do you provide referrals to specialists?',
-    a: 'Yes. Care coordination is part of the practice, which includes helping you navigate specialists, imaging, and lab work. The goal is that nothing falls through the cracks. Your physician can help you understand why a referral is recommended and what to expect from it.',
-  },
-  {
-    q: 'How are lab work and imaging handled?',
-    a: 'When tests are appropriate, your physician will explain what they are for and what the results may mean. She helps coordinate the lab work or imaging and follows up on results with you. Details on where testing is done and how it is billed are best confirmed by calling the office.',
-  },
-  {
-    q: 'What preventive care do you offer?',
-    a: 'Preventive care includes routine screenings, risk assessment, and lifestyle guidance tailored to your goals. The focus is on catching issues early and keeping you well. Recommendations are based on your age, history, and risk factors, and are grounded in evidence rather than one-size-fits-all checklists.',
-  },
-  {
-    q: 'How can I communicate with my physician between visits?',
-    a: 'The practice aims to keep communication simple and direct, so you have access to your physician. The specific ways to reach the office and typical response times are best confirmed by calling. Please do not use non-urgent channels for emergencies.',
-  },
-  {
-    q: 'What is your cancellation or late-arrival policy?',
-    a: 'Please call the office to ask about scheduling policies. We would rather explain them to you directly so you have accurate information. If something comes up, contacting the office as early as you can is always appreciated.',
-  },
-  {
-    q: 'Do you see children or only adults?',
-    a: 'The practice is focused on whole-person care for adults. If you are looking for care for a family member of a different age, call the office and we can discuss whether the practice is the right fit or help point you toward suitable options.',
-  },
-  {
-    q: 'Can I transfer my records to your practice?',
-    a: 'Having your prior records is helpful, and many patients request them from previous providers before the first visit. Call the office to ask about the best way to send them. Even without full records, the first visit gives plenty of time to review your history in detail.',
-  },
-  {
-    q: 'Where is the practice located?',
-    a: 'The practice serves patients in West Hollywood, CA. Please call the office for location details and directions before your first visit.',
-  },
+  { q: 'Is Dr. Chetver accepting new patients?', a: 'Yes. Call the office at (323) 650-2991 or send a request through this website and the office will find a time for a first visit.' },
+  { q: 'Which insurance plans do you accept?', a: 'The office accepts Medicare and most major plans, including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Anthem and Humana. Plans change, so please call with your card handy and the staff will confirm yours before your visit.' },
+  { q: 'Do you speak Russian?', a: 'Yes. Dr. Chetver and the office staff speak Russian and English. Visits, phone calls and paperwork can be handled in either language.' },
+  { q: 'What are your office hours?', a: 'The office sees patients three days a week. Please call for the current schedule.' },
+  { q: 'What should I bring to my first visit?', a: 'A photo ID, your insurance card, a list of your current medications or the bottles themselves, and any recent test results or records from a previous doctor. Please arrive a few minutes early for paperwork.' },
+  { q: 'How do I request a prescription refill?', a: 'Ask your pharmacy first, since they can send the request to the office directly. You can also call the office with the name of the medication and your pharmacy. Every refill is reviewed by Dr. Chetver before it is sent, so please allow a few business days and do not wait until you are out.' },
+  { q: 'Do I need an appointment to be seen?', a: 'Yes, the office sees patients by appointment. Call and the staff will fit you in as soon as they can.' },
+  { q: 'Which hospital is Dr. Chetver affiliated with?', a: 'Dr. Chetver is affiliated with Cedars-Sinai Medical Center.' },
+  { q: 'What kind of doctor is an internist?', a: 'An internal medicine physician cares for adults: preventive check-ups, everyday illnesses, and long-term conditions such as high blood pressure, high cholesterol and diabetes. Dr. Chetver is board certified by the American Board of Internal Medicine.' },
+  { q: 'What if I have an emergency?', a: 'Call 911 or go to the nearest emergency room. The office line is for appointments, questions and refills during business hours.' },
 ]
 
-export default function FAQPage() {
+export default function FaqPage() {
+  const schema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }
   return (
     <main>
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <nav aria-label="Breadcrumb" className="text-sm text-white/80 mb-6">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <span className="mx-2">›</span>
-            <span>FAQ</span>
-          </nav>
-          <h1 className="font-cormorant text-5xl font-light">Frequently Asked Questions</h1>
-          <p className="mt-6 text-lg text-white/90">Everything you need to know about our practice and services</p>
-        </div>
-      </section>
-
-      <section className="bg-[var(--color-cream)] py-24">
-        <div className="max-w-4xl mx-auto px-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <SplitHero src="/images/stock/hub-faq.jpg" alt="A physician answering a patient's questions across a desk">
+        <nav className="text-sm mb-6 opacity-90"><Link href="/" className="hover:underline">Home</Link><span className="mx-2">›</span><span>FAQ</span></nav>
+        <h1 className="font-cormorant text-5xl sm:text-6xl font-light leading-tight">Frequently Asked Questions</h1>
+        <p className="text-lg sm:text-xl text-white/90 mt-6 leading-relaxed max-w-xl">Insurance, new patients, refills, languages and what to bring. Anything else, call (323) 650-2991.</p>
+      </SplitHero>
+      <section className="bg-white py-20">
+        <div className="max-w-3xl mx-auto px-6 divide-y divide-[var(--color-border)]">
           {faqs.map((f) => (
-            <details key={f.q} className="group animate-fade-up border border-[var(--color-border)] rounded-xl mb-3 bg-white">
-              <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] font-cormorant text-xl list-none flex justify-between items-center gap-4">
-                <span>{f.q}</span>
-                <svg className="w-6 h-6 shrink-0 text-[var(--color-accent)] transition-transform group-open:rotate-180" stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </summary>
-              <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">{f.a}</div>
+            <details key={f.q} className="py-5 group">
+              <summary className="cursor-pointer font-semibold text-[var(--color-ink)] text-lg list-none flex justify-between gap-4">{f.q}<span className="text-[var(--color-primary)] group-open:rotate-45 transition-transform">+</span></summary>
+              <p className="text-[var(--color-muted)] leading-relaxed mt-3">{f.a}</p>
             </details>
           ))}
         </div>
       </section>
-
-      <section className="bg-[var(--color-ink)] text-white py-20 text-center">
-        <div className="max-w-3xl mx-auto px-6 animate-fade-up">
-          <h2 className="font-cormorant text-4xl font-light">Still have questions?</h2>
-          <p className="mt-4 text-white/80">Reach out to the office and we will be glad to explain how the practice works.</p>
-          <Link href="/contact" className="inline-block mt-8 px-8 py-3 rounded-lg bg-[var(--color-accent)] text-white font-semibold hover:bg-[var(--color-accent-dark)] transition-colors">
-            Schedule a Visit
-          </Link>
+      <section className="bg-[var(--color-cream)] py-16">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="font-cormorant text-4xl text-[var(--color-ink)]">Still have a question?</h2>
+          <div className="mt-6 flex flex-wrap gap-4 justify-center">
+            <a href="tel:+13236502991" data-ga="phone_click" className="bg-[var(--color-primary)] text-white px-7 py-3.5 rounded-xl font-bold">Call (323) 650-2991</a>
+            <Link href="/contact" className="border-2 border-[var(--color-primary)] text-[var(--color-primary)] px-7 py-3.5 rounded-xl font-semibold">Send a message</Link>
+          </div>
         </div>
       </section>
     </main>

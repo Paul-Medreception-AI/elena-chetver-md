@@ -1,147 +1,180 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
+import ContactForm from '@/components/ContactForm'
+import { focus } from '@/lib/imageFocus'
+import { SERVICES } from '@/lib/data/services'
+import { CONDITIONS } from '@/lib/data/conditions'
+
+const TITLE = 'Internal Medicine in West Hollywood, CA | Elena Chetver, MD'
+const DESCRIPTION = 'Dr. Elena Chetver, board-certified internal medicine physician in West Hollywood, CA. Over 40 years caring for adults. English and Russian spoken. Medicare and major plans accepted.'
 
 export const metadata: Metadata = {
-  title: 'Primary Care in West Hollywood, CA | Elena Chetver, MD',
-  description: 'Direct primary care in West Hollywood, CA with Dr. Elena Chetver. Unhurried visits, clear answers, and a physician who knows your whole health story.',
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: '/' },
-  openGraph: {
-    title: 'Primary Care in West Hollywood, CA | Elena Chetver, MD',
-    description: 'Direct primary care in West Hollywood, CA with Dr. Elena Chetver. Unhurried visits, clear answers, and a physician who knows your whole health story.',
-    url: 'https://elenachetvermd.com/',
-    siteName: 'Elena Chetver, MD',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary',
-    title: 'Primary Care in West Hollywood, CA | Elena Chetver, MD',
-    description: 'Direct primary care in West Hollywood, CA with Dr. Elena Chetver. Unhurried visits, clear answers, and a physician who knows your whole health story.',
-  },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: 'https://elenachetvermd.com/', siteName: 'Elena Chetver, MD', type: 'website' },
+  twitter: { card: 'summary', title: TITLE, description: DESCRIPTION },
 }
 
 const trust = [
-  'Personalized Care Plans',
-  'Evidence-Based Care',
-  'Clear Answers to Your Questions',
-  'Direct Access to Your Physician',
+  'Board-certified internal medicine',
+  'Over 40 years in practice',
+  'English and Russian spoken',
+  'Medicare and major plans accepted',
+  'Accepting new patients',
 ]
 
-const steps = [
-  { number: '01', title: 'Reach Out', description: 'Contact the office with your questions or request an introductory conversation. We will explain how the practice works and what to expect.' },
-  { number: '02', title: 'Meet Your Physician', description: 'Your first visit is a thorough conversation about your history, concerns, and goals. There is time to ask anything you like.' },
-  { number: '03', title: 'Ongoing Partnership', description: 'Receive continuing care guided by a plan made for you. Follow-up and communication stay simple and direct.' },
+const why = [
+  { title: 'One physician who knows you', body: 'Dr. Chetver is a solo internist. You see the same doctor at every visit, and she knows your history, your medications and your family.' },
+  { title: 'Care in your language', body: 'Dr. Chetver and the office staff speak Russian and English, so you can describe what is wrong in the words that come naturally.' },
+  { title: 'Decades of experience', body: 'Trained at the First Moscow State Medical University and in internal medicine at LA County and USC Medical Center, Dr. Chetver has cared for West Hollywood patients for decades and is affiliated with Cedars-Sinai Medical Center.' },
+  { title: 'Insurance accepted', body: 'The office accepts Medicare and most major plans, including Aetna, Blue Cross Blue Shield, Cigna and UnitedHealthcare. Call to confirm your plan.' },
+]
+
+const reviews = [
+  { quote: 'I went to see Dr. Chetver for an annual physical and to find a new primary doctor. The booking process was very easy as she had appointments available within the week. The office was easy to find and had free parking spots available (which is a huge bonus for WeHo). The office was a little small and felt old school, but the staff was friendly and did my patient intake and paperwork right away.', name: 'Victoria C.', when: 'August 2022', source: 'Zocdoc, verified patient' },
+  { quote: 'I chose Dr. Chetver because of her photo and proximity to where I live, and was pleasantly surprised at how well picking a doctor from an app worked out. I\'ll continue to see Dr. Chetver as my primary care in the future.', name: 'Chelsea H.', when: 'July 2022', source: 'Zocdoc, verified patient' },
 ]
 
 export default function HomePage() {
+  const heroSrc = '/images/stock/hub-home.jpg'
   return (
     <main className="font-sans">
-      {/* optimize-skill target: pure-gradient hero (no real photo was found on the prior site) */}
-      <section className="min-h-[90vh] bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] flex items-center text-white">
-        <div className="max-w-5xl mx-auto px-6 text-center py-20">
-          <h1 className="font-cormorant text-6xl sm:text-7xl font-light tracking-tight leading-tight">
-            Primary Care With Time to Listen and Time to Care
-          </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mt-6 leading-relaxed">
-            Dr. Elena Chetver offers a direct primary care model that puts the patient relationship first. Expect thoughtful visits, clear answers, and a physician who knows your whole health story.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-[var(--color-dark)] px-8 py-4 rounded-xl font-bold shadow-xl hover:-translate-y-0.5 transition-all">
-              Schedule a Visit
-            </Link>
-            <Link href="/services" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all">
-              View Our Services
-            </Link>
+      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] text-white">
+        <div className="max-w-7xl mx-auto px-6 py-14 sm:py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div className="min-w-0">
+            <p className="text-sm font-semibold tracking-[0.2em] uppercase text-white/80">West Hollywood, CA · Internal Medicine</p>
+            <h1 className="font-cormorant text-5xl sm:text-6xl font-light tracking-tight leading-tight mt-4">
+              Internal Medicine and Primary Care for Adults
+            </h1>
+            <p className="text-lg sm:text-xl text-white/90 mt-6 leading-relaxed max-w-xl">
+              Dr. Elena Chetver has cared for adults in West Hollywood for over 40 years, in English and in Russian, with Medicare and major insurance plans accepted.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link href="/contact" data-ga="consultation_click" className="bg-white text-[var(--color-dark)] px-8 py-4 rounded-xl font-bold shadow-xl hover:-translate-y-0.5 transition-all">
+                Request an Appointment
+              </Link>
+              <a href="tel:+13236502991" data-ga="phone_click" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all">
+                Call (323) 650-2991
+              </a>
+            </div>
+            <p className="mt-6 text-white/80" lang="ru">Мы говорим по-русски.</p>
+          </div>
+          <div className="relative h-64 sm:h-80 lg:h-[28rem] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-[var(--color-dark)]">
+            <Image src={heroSrc} alt="A physician talking with a patient across a desk in a medical office" fill priority quality={85} sizes="(max-width: 1024px) 100vw, 600px" className="object-cover" style={{ objectPosition: focus(heroSrc) }} />
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-8 border-b border-[var(--color-border)]">
-        <div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-center gap-x-12 gap-y-4">
+      <section className="bg-white py-6 border-b border-[var(--color-border)]">
+        <div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-center gap-x-10 gap-y-3">
           {trust.map((t) => (
-            <div key={t} className="flex items-center gap-3">
-              <svg className="w-6 h-6 text-[var(--color-primary)]" stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-              </svg>
-              <span className="font-bold text-[var(--color-ink)]">{t}</span>
+            <div key={t} className="flex items-center gap-2.5">
+              <svg className="w-5 h-5 text-[var(--color-primary)]" stroke="currentColor" strokeWidth={1.8} fill="none" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+              <span className="text-sm font-semibold text-[var(--color-ink)]">{t}</span>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-[var(--color-cream)] py-24">
+      <section className="bg-[var(--color-cream)] py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="font-cormorant text-5xl text-center text-[var(--color-ink)] mb-4">How We Can Help</h2>
-          <p className="text-center text-[var(--color-muted)] mb-16">Primary care in West Hollywood, CA, centered on your health and your questions.</p>
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="animate-fade-up bg-white rounded-2xl p-8 border border-[var(--color-border)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <svg className="w-10 h-10 stroke-[var(--color-primary)]" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 3v6a4 4 0 008 0V3" />
-                <path d="M10 13v2a5 5 0 0010 0v-1" />
-                <circle cx="20" cy="12" r="2" />
-              </svg>
-              <h3 className="font-cormorant text-2xl font-semibold text-[var(--color-ink)] mt-5">Comprehensive Primary Care</h3>
-              <p className="text-[var(--color-muted)] text-sm leading-relaxed mt-3">Whole-person care for adults, from preventive visits to ongoing health concerns. Your physician coordinates every part of your health with a full understanding of your history.</p>
-              <Link href="/services" className="inline-block text-[var(--color-primary)] font-semibold text-sm mt-6 hover:underline">Learn More →</Link>
-            </div>
-            <div className="animate-fade-up bg-white rounded-2xl p-8 border border-[var(--color-border)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <svg className="w-10 h-10 stroke-[var(--color-primary)]" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3z" />
-                <path d="M8.5 12l2.5 2.5 4.5-5" />
-              </svg>
-              <h3 className="font-cormorant text-2xl font-semibold text-[var(--color-ink)] mt-5">Preventive Care and Wellness</h3>
-              <p className="text-[var(--color-muted)] text-sm leading-relaxed mt-3">Routine screenings, risk assessment, and lifestyle guidance tailored to your goals. We focus on catching issues early and keeping you well.</p>
-              <Link href="/services" className="inline-block text-[var(--color-primary)] font-semibold text-sm mt-6 hover:underline">Learn More →</Link>
-            </div>
-            <div className="animate-fade-up bg-white rounded-2xl p-8 border border-[var(--color-border)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <svg className="w-10 h-10 stroke-[var(--color-primary)]" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 20s-8-4.7-8-10.5A4.5 4.5 0 0112 7a4.5 4.5 0 018 2.5C20 15.3 12 20 12 20z" />
-                <path d="M3 12h4l2-3 3 6 2-3h2" />
-              </svg>
-              <h3 className="font-cormorant text-2xl font-semibold text-[var(--color-ink)] mt-5">Chronic Disease Management</h3>
-              <p className="text-[var(--color-muted)] text-sm leading-relaxed mt-3">Ongoing support for conditions such as hypertension, diabetes, and thyroid disorders. Regular follow-up helps keep your care plan current and effective.</p>
-              <Link href="/services" className="inline-block text-[var(--color-primary)] font-semibold text-sm mt-6 hover:underline">Learn More →</Link>
-            </div>
+          <h2 className="font-cormorant text-4xl sm:text-5xl text-center text-[var(--color-ink)] mb-4">Services</h2>
+          <p className="text-center text-[var(--color-muted)] mb-12 max-w-2xl mx-auto">Preventive care, sick visits and the long-term management of adult health, from one internist who knows you.</p>
+          <div className="grid gap-6 md:grid-cols-3">
+            {SERVICES.map((s) => (
+              <Link key={s.slug} href={`/services/${s.slug}`} className="group bg-white rounded-2xl p-7 border border-[var(--color-border)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-cormorant text-2xl font-semibold text-[var(--color-ink)] group-hover:text-[var(--color-primary)]">{s.title}</h3>
+                <p className="text-[var(--color-muted)] text-sm leading-relaxed mt-3">{s.description}</p>
+                <span className="inline-block text-[var(--color-primary)] font-semibold text-sm mt-5">Learn more →</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-24">
-        <div className="max-w-6xl mx-auto px-6 grid gap-12 lg:grid-cols-5 items-center">
-          <div className="lg:col-span-3 animate-fade-up">
-            <h2 className="font-cormorant text-4xl text-[var(--color-ink)]">Medicine Rooted in Relationship and Trust</h2>
-            <p className="text-[var(--color-muted)] leading-relaxed mt-6">Dr. Elena Chetver founded her practice on the belief that good medicine begins with listening. The direct primary care model allows for visits that are not rushed, so questions get answered and concerns are fully explored.</p>
-            <p className="text-[var(--color-muted)] leading-relaxed mt-4">Her approach combines evidence-based medicine with respect for each patient&apos;s values, preferences, and circumstances. Care plans are built together, explained clearly, and adjusted as your life and health change.</p>
-            <Link href="/team" className="inline-block text-[var(--color-primary)] font-semibold mt-8 hover:underline">Meet Our Team →</Link>
+      <section className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="font-cormorant text-4xl sm:text-5xl text-center text-[var(--color-ink)] mb-4">Conditions We Treat</h2>
+          <p className="text-center text-[var(--color-muted)] mb-12 max-w-2xl mx-auto">Common adult conditions managed in the office, with referral to a specialist when one is needed.</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {CONDITIONS.slice(0, 16).map((c) => (
+              <Link key={c.slug} href={`/conditions/${c.slug}`} className="px-4 py-2 rounded-full border border-[var(--color-border)] bg-[var(--color-cream)] text-sm font-semibold text-[var(--color-ink)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors">{c.title}</Link>
+            ))}
           </div>
-          <div className="lg:col-span-2 animate-fade-up bg-[var(--color-light)] rounded-2xl h-80 w-full flex items-center justify-center">
-            <svg className="w-20 h-20 stroke-[var(--color-primary)] opacity-40" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3z" />
-            </svg>
+          <div className="text-center mt-8">
+            <Link href="/conditions" className="text-[var(--color-primary)] font-semibold hover:underline">All conditions we treat →</Link>
           </div>
         </div>
       </section>
 
-      <section className="bg-[var(--color-ink)] text-white py-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="font-cormorant text-4xl text-center mb-16">Getting Started Is Simple</h2>
-          <div className="grid gap-12 md:grid-cols-3">
-            {steps.map((s) => (
-              <div key={s.number} className="animate-fade-up">
-                <div className="font-cormorant text-7xl text-[var(--color-primary)] opacity-60">{s.number}</div>
-                <h3 className="font-cormorant text-2xl mt-2">{s.title}</h3>
-                <p className="text-sm text-white/70 mt-3 leading-relaxed">{s.description}</p>
+      <section className="bg-[var(--color-cream)] py-20">
+        <div className="max-w-6xl mx-auto px-6 grid gap-12 lg:grid-cols-5 items-start">
+          <div className="lg:col-span-2">
+            <h2 className="font-cormorant text-4xl text-[var(--color-ink)]">Why Patients Choose Dr. Chetver</h2>
+            <p className="text-[var(--color-muted)] leading-relaxed mt-5">A small, physician-led office on Santa Monica Boulevard, where the doctor who examines you is the one who answers your questions.</p>
+            <Link href="/about" className="inline-block text-[var(--color-primary)] font-semibold mt-6 hover:underline">About Dr. Chetver →</Link>
+          </div>
+          <div className="lg:col-span-3 grid gap-5 sm:grid-cols-2">
+            {why.map((w) => (
+              <div key={w.title} className="bg-white rounded-2xl p-6 border border-[var(--color-border)]">
+                <h3 className="font-cormorant text-xl font-semibold text-[var(--color-ink)]">{w.title}</h3>
+                <p className="text-[var(--color-muted)] text-sm leading-relaxed mt-2">{w.body}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] text-white py-24 text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-cormorant text-5xl font-light mb-6">Unhurried Primary Care Built Around You</h2>
-          <Link href="/contact" className="inline-block bg-white text-[var(--color-dark)] font-bold px-12 py-5 rounded-2xl shadow-2xl hover:-translate-y-1 transition-all text-lg">
-            Schedule a Visit
-          </Link>
+      <section className="bg-[var(--color-ink)] text-white py-16">
+        <div className="max-w-6xl mx-auto px-6 grid gap-10 lg:grid-cols-2 items-center">
+          <div>
+            <p className="text-sm font-semibold tracking-[0.2em] uppercase text-white/70">Russian-speaking patients</p>
+            <h2 className="font-cormorant text-4xl mt-3" lang="ru">Приём ведётся на русском языке</h2>
+            <p className="text-white/80 leading-relaxed mt-4" lang="ru">Доктор Елена Четвер, терапевт с более чем сорокалетним опытом, принимает взрослых пациентов в Западном Голливуде. Персонал офиса говорит по-русски и по-английски. Принимаем Medicare и основные страховые планы.</p>
+            <a href="tel:+13236502991" data-ga="phone_click" className="inline-block mt-6 bg-white text-[var(--color-ink)] px-6 py-3 rounded-xl font-bold" lang="ru">Позвонить: (323) 650-2991</a>
+          </div>
+          <div>
+            <h3 className="font-cormorant text-2xl">Care in Russian and English</h3>
+            <p className="text-white/80 leading-relaxed mt-3">About half of the practice&apos;s patients are Russian speakers. Dr. Chetver trained in Moscow and practises in Los Angeles, and visits, phone calls and paperwork can all be handled in either language.</p>
+            <Link href="/russian-speaking-doctor" className="inline-block text-white font-semibold mt-5 underline underline-offset-4">Подробнее / Read more →</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="font-cormorant text-4xl sm:text-5xl text-center text-[var(--color-ink)] mb-3">What Patients Say</h2>
+          <p className="text-center text-[var(--color-muted)] mb-12">Rated 4.5 out of 5 from 140 verified patient reviews on <a href="https://www.zocdoc.com/doctor/elena-chetver-md-144807" target="_blank" rel="noopener noreferrer" className="underline text-[var(--color-primary)]">Zocdoc</a>.</p>
+          <div className="grid gap-6 md:grid-cols-2">
+            {reviews.map((r) => (
+              <figure key={r.name} className="bg-[var(--color-cream)] rounded-2xl p-7 border border-[var(--color-border)]">
+                <blockquote className="text-[var(--color-ink)] leading-relaxed">&ldquo;{r.quote}&rdquo;</blockquote>
+                <figcaption className="mt-5 text-sm text-[var(--color-muted)]"><span className="font-semibold text-[var(--color-ink)]">{r.name}</span> · {r.when} · {r.source}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="text-center mt-8"><Link href="/reviews" className="text-[var(--color-primary)] font-semibold hover:underline">More patient reviews →</Link></div>
+        </div>
+      </section>
+
+      <section className="bg-[var(--color-cream)] py-20">
+        <div className="max-w-6xl mx-auto px-6 grid gap-12 lg:grid-cols-2">
+          <div>
+            <h2 className="font-cormorant text-4xl text-[var(--color-ink)]">Visit the Office</h2>
+            <dl className="mt-6 space-y-4 text-[var(--color-ink)]">
+              <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Address</dt><dd className="mt-1"><a href="https://maps.google.com/?q=7531+Santa+Monica+Blvd+Suite+210+West+Hollywood+CA+90046" target="_blank" rel="noopener noreferrer" className="hover:underline">7531 Santa Monica Blvd., Suite 210<br />West Hollywood, CA 90046</a></dd></div>
+              <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Phone</dt><dd className="mt-1"><a href="tel:+13236502991" data-ga="phone_click" className="font-semibold hover:underline">(323) 650-2991</a></dd></div>
+              <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Fax</dt><dd className="mt-1">(323) 650-2993</dd></div>
+              <div><dt className="text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)]">Hours</dt><dd className="mt-1">The office sees patients three days a week. Please call for current hours.</dd></div>
+            </dl>
+          </div>
+          <div id="request">
+            <h2 className="font-cormorant text-4xl text-[var(--color-ink)]">Request an Appointment</h2>
+            <p className="text-[var(--color-muted)] mt-3">Leave your name and the best way to reach you. The office calls back during business hours to find a time. Please do not include medical details here.</p>
+            <div className="mt-6"><ContactForm /></div>
+          </div>
         </div>
       </section>
     </main>

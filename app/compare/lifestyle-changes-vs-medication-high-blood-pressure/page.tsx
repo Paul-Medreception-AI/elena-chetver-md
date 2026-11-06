@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import SplitHero from '@/components/SplitHero'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -58,23 +59,16 @@ export default function Page() {
   ]
   return (
     <main className="text-[var(--color-ink)]">
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
+      <SplitHero src="/images/stock/compare-lifestyle-changes-vs-medication-high-blood-pressure.jpg" alt="A senior adult checking their blood pressure with a digital monitor at home.">
+        <div>
           <nav aria-label="Breadcrumb" className="text-sm mb-6 text-white/80">
             <Link href="/" className="hover:text-white transition-colors">Home</Link> › <span>Resources</span> › <span>Comparison</span>
           </nav>
           <h1 className="font-cormorant text-5xl font-light">Lifestyle Changes vs Medication for High Blood Pressure</h1>
-          <p className="mt-6 text-lg text-white/90 max-w-2xl mx-auto">An honest look at both approaches so you can have a more informed conversation about your treatment in West Hollywood, CA.</p>
+          <p className="mt-6 text-lg text-white/90 max-w-2xl">An honest look at both approaches so you can have a more informed conversation about your treatment in West Hollywood, CA.</p>
         </div>
-      </section>
+      </SplitHero>
 
-      {/* page-image:start */}
-      <div className="max-w-5xl mx-auto px-6 -mt-10 relative z-10">
-        <div className="w-full rounded-2xl overflow-hidden shadow-xl bg-[var(--color-light)]">
-          <img src={"/images/stock/compare-lifestyle-changes-vs-medication-high-blood-pressure.jpg"} alt={"Close-up image of various colored pharmaceutical pills. Ideal for medical and healthcare topics."} width={1200} height={627} loading="lazy" className="block w-full h-auto" />
-        </div>
-      </div>
-      {/* page-image:end */}
 
       <section className="bg-[var(--color-cream)] py-24">
         <div className="max-w-4xl mx-auto px-6">

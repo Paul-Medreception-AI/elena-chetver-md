@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import SplitHero from '@/components/SplitHero'
 
 export const metadata: Metadata = {
   title: 'Managing Stress for a Healthier Body',
@@ -44,24 +45,17 @@ function Check() {
 export default function Page() {
   return (
     <main>
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <SplitHero src="/images/stock/blog-managing-stress-for-a-healthier-body.jpg" alt="Woman practicing yoga poses in a bright living room, promoting relaxation and wellness.">
+        <div>
           <nav className="text-sm text-white/70 mb-6">
             <a href="/" className="hover:text-white transition-colors">Home</a> › <a href="/blog" className="hover:text-white transition-colors">Resources</a> › Article
           </nav>
           <p className="text-xs uppercase tracking-widest text-white/70 mb-4">Patient Education</p>
-          <h1 className="font-cormorant text-5xl font-light leading-tight max-w-3xl mx-auto text-center">Managing Stress for a Healthier Body</h1>
+          <h1 className="font-cormorant text-5xl font-light leading-tight max-w-3xl">Managing Stress for a Healthier Body</h1>
           <p className="mt-6 text-sm text-white/80">Published November 2026 · 6 min read</p>
         </div>
-      </section>
+      </SplitHero>
 
-      {/* page-image:start */}
-      <div className="max-w-5xl mx-auto px-6 -mt-10 relative z-10">
-        <div className="w-full rounded-2xl overflow-hidden shadow-xl bg-[var(--color-light)]">
-          <img src={"/images/stock/blog-managing-stress-for-a-healthier-body.jpg"} alt={"A soothing massage being performed outdoors, focusing on wellness and relaxation."} width={1200} height={627} loading="lazy" className="block w-full h-auto" />
-        </div>
-      </div>
-      {/* page-image:end */}
 
       <article className="bg-white py-20 max-w-3xl mx-auto px-6 text-[var(--color-ink)] leading-loose text-base">
         <p className="text-lg">You lie awake at 2 a.m. replaying tomorrow's to-do list. Your shoulders ache, your stomach is unsettled, and you cannot remember the last time you felt truly relaxed. If this sounds familiar, you are far from alone. Stress is a normal part of life, but when it never switches off, it can quietly shape your physical health in ways that are easy to miss.</p>

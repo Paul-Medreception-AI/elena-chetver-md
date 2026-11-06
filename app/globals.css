@@ -27,3 +27,8 @@ body { background-color: var(--color-cream); color: var(--color-ink); }
   animation-timeline: view();
   animation-range: entry 0% entry 35%;
 }
+/* The sticky mobile call bar sits at the bottom edge below lg; the MedReception widget launcher moves up so the two never overlap. */
+@media (max-width: 1023px) {
+  #medreception-widget-host { bottom: 88px !important; }
+  body { padding-bottom: 72px; }
+}

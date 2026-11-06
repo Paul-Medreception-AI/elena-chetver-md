@@ -17,15 +17,15 @@ const rows = (hub: string, list: Row[]): NavItem[] => list.map((r) => ({ href: h
 
 const NAME = "Elena Chetver, MD"
 const LOGO: string | null = null
-const CTA = {"href":"/contact","label":"Schedule a Visit"}
+const CTA = {"href":"/contact","label":"Request an Appointment"}
 const PHONE: { href: string; label: string } | null = null
 
 const NAV: NavGroup[] = [
   { href: "/services", label: "Services", items: [...rows("/services", SERVICES)], footer: {"href":"/services","label":"All services"} },
   { href: "/conditions", label: "Conditions", items: [...rows("/conditions", CONDITIONS)], footer: {"href":"/conditions","label":"All conditions we treat"} },
   { href: "/about", label: "About", items: [...[{"href":"/team","label":"Our Team"},{"href":"/reviews","label":"Patient Reviews"},{"href":"/locations/west-hollywood-ca","label":"West Hollywood, CA"}]] },
-  { href: "/new-patients", label: "Patients", items: [...[{"href":"/insurance","label":"Insurance & Billing"},{"href":"/telehealth","label":"Visiting Our Office"},{"href":"/faq","label":"FAQ"}]] },
-  { href: "/blog", label: "Resources", items: [...[{"href":"/compare/annual-physical-vs-symptom-based-visits","label":"Annual Physical vs Symptom-Based Visits: What Do You Need?"},{"href":"/compare/direct-primary-care-vs-traditional-primary-care","label":"Direct Primary Care vs Traditional Primary Care: Which Is Right for You?"},{"href":"/compare/lifestyle-changes-vs-medication-high-blood-pressure","label":"Lifestyle Changes vs Medication for High Blood Pressure"},{"href":"/compare/primary-care-physician-vs-specialist","label":"Primary Care Physician vs Specialist: Who Should You See First?"},{"href":"/compare/primary-care-vs-urgent-care","label":"Primary Care Visit vs Urgent Care: Where Should You Go?"}]] },
+  { href: "/new-patients", label: "Patients", items: [...[{"href":"/insurance","label":"Insurance & Billing"},{"href":"/telehealth","label":"Visiting Our Office"},{"href":"/faq","label":"FAQ"},{"href":"/russian-speaking-doctor","label":"По-русски / Russian"}]] },
+  { href: "/blog", label: "Resources", items: [...[{"href":"/compare/annual-physical-vs-symptom-based-visits","label":"Annual Physical vs Symptom-Based Visits: What Do You Need?"},{"href":"/compare/lifestyle-changes-vs-medication-high-blood-pressure","label":"Lifestyle Changes vs Medication for High Blood Pressure"},{"href":"/compare/primary-care-physician-vs-specialist","label":"Primary Care Physician vs Specialist: Who Should You See First?"},{"href":"/compare/primary-care-vs-urgent-care","label":"Primary Care Visit vs Urgent Care: Where Should You Go?"}]] },
   { href: "/contact", label: "Contact", items: [] },
 ]
 

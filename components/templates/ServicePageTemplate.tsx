@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import SplitHero from '@/components/SplitHero'
 import type { Metadata } from 'next'
 
 export type FAQ = { q: string; a: string }
@@ -120,33 +120,33 @@ export function ServicePageTemplate({ c }: { c: ServicePageContent }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       {schemaFaq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFaq) }} />}
 
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-center">
-            <div className="w-full lg:w-3/5">
-              <nav className="text-sm mb-6 opacity-90">
-                <a href="/" className="hover:underline">Home</a>
-                <span className="mx-2">›</span>
-                <a href={c.hubHref} className="hover:underline">{c.hubLabel}</a>
-                <span className="mx-2">›</span>
-                <span>{c.title}</span>
-              </nav>
-              <h1 className="text-4xl md:text-5xl font-semibold mb-6 leading-tight">{c.headline}</h1>
-              <p className="text-xl opacity-95 max-w-3xl leading-relaxed">{c.heroSubhead || c.description}</p>
+      {(() => {
+        const heroCopy = (
+          <>
+            <nav className="text-sm mb-6 opacity-90">
+              <a href="/" className="hover:underline">Home</a>
+              <span className="mx-2">›</span>
+              <a href={c.hubHref} className="hover:underline">{c.hubLabel}</a>
+              <span className="mx-2">›</span>
+              <span>{c.title}</span>
+            </nav>
+            <h1 className="text-4xl md:text-5xl font-semibold mb-6 leading-tight">{c.headline}</h1>
+            <p className="text-xl opacity-95 max-w-3xl leading-relaxed">{c.heroSubhead || c.description}</p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a href={c.ctaHref} className="bg-white text-[var(--color-dark)] px-7 py-3.5 rounded-xl font-bold shadow-xl hover:-translate-y-0.5 transition-all">{c.ctaLabel}</a>
+              <a href="tel:+13236502991" data-ga="phone_click" className="border-2 border-white text-white px-7 py-3.5 rounded-xl font-semibold hover:bg-white/10 transition-all">Call (323) 650-2991</a>
             </div>
-            {c.heroImage && c.heroImage.src && c.heroImage.width && c.heroImage.height ? (
-              // Sized by the photo itself, so the whole image shows (a fixed-height box cropped ~45% of a 1200x627 photo)
-              <div className="w-full max-w-md lg:w-2/5 lg:max-w-none rounded-2xl overflow-hidden shadow-2xl">
-                <Image src={c.heroImage.src} alt={c.heroImage.alt} width={c.heroImage.width} height={c.heroImage.height} priority quality={90} sizes="(max-width: 1024px) 100vw, 40vw" className="block w-full h-auto" />
-              </div>
-            ) : c.heroImage && c.heroImage.src ? (
-              <div className="relative w-full max-w-md lg:w-2/5 lg:max-w-none h-96 lg:h-[28rem] rounded-2xl overflow-hidden shadow-2xl">
-                <Image src={c.heroImage.src} alt={c.heroImage.alt} fill priority quality={90} sizes="(max-width: 768px) 100vw, 384px" className="object-contain" />
-              </div>
-            ) : null}
-          </div>
-        </div>
-      </section>
+          </>
+        )
+        // Every page opens side by side: copy on navy, the photo beside it, never text over a photo (SplitHero).
+        return c.heroImage && c.heroImage.src ? (
+          <SplitHero src={c.heroImage.src} alt={c.heroImage.alt}>{heroCopy}</SplitHero>
+        ) : (
+          <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white">
+            <div className="max-w-7xl mx-auto px-6">{heroCopy}</div>
+          </section>
+        )
+      })()}
 
       {c.featuredVideo && (
         <section className="bg-white py-16">

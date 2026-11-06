@@ -2,6 +2,8 @@
 // mapped from lib/data/conditions.ts, so a page added there (including by the silo
 // builder's data_append) appears here without editing this file.
 import type { Metadata } from 'next'
+import Image from 'next/image'
+import SplitHero from '@/components/SplitHero'
 import { CONDITIONS } from '../../lib/data/conditions'
 
 const TITLE = "Conditions We Treat | Elena Chetver, MD"
@@ -31,17 +33,17 @@ const CARDS: Card[] = [
 export default function ConditionsHubPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
+      <SplitHero src="/images/stock/hub-conditions.jpg" alt="A physician explaining results to a patient on a tablet">
+        <div>
           <nav className="text-sm text-white/70 mb-4" aria-label="Breadcrumb">
             <a href="/" className="hover:underline">Home</a>
             <span className="mx-2">›</span>
             <span>Conditions</span>
           </nav>
           <h1 className="font-cormorant text-5xl md:text-6xl font-light">{HEADING}</h1>
-          <p className="text-xl text-white/85 max-w-2xl mx-auto mt-4 leading-relaxed">{SUBHEADING}</p>
+          <p className="text-xl text-white/85 max-w-2xl mt-4 leading-relaxed">{SUBHEADING}</p>
         </div>
-      </section>
+      </SplitHero>
 
       <section className="bg-[var(--color-cream)] py-20">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -49,7 +51,7 @@ export default function ConditionsHubPage() {
             <a key={c.slug} href={"/conditions/" + c.slug} className="group block bg-white rounded-2xl overflow-hidden border border-[var(--color-border)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               {c.image && c.image.src ? (
                 <div className="w-full bg-[var(--color-light)] overflow-hidden">
-                  <img src={c.image.src} alt={c.image.alt || c.title} loading="lazy" className="block w-full h-auto group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={c.image.src} alt={c.image.alt || c.title} width={2000} height={1050} sizes="(max-width: 768px) 100vw, 33vw" className="block w-full h-auto group-hover:scale-105 transition-transform duration-500" />
                 </div>
               ) : null}
               <div className="p-8">

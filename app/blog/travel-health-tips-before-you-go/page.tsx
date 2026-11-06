@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import SplitHero from '@/components/SplitHero'
 
 export const metadata: Metadata = {
   title: 'Travel Health Tips Before You Go',
@@ -35,24 +36,17 @@ const related = [
 export default function Page() {
   return (
     <main>
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+      <SplitHero src="/images/stock/blog-travel-health-tips-before-you-go.jpg" alt="Brown leather bag with passport in an airport setting, ideal for travel and fashion themes.">
+        <div>
           <nav className="text-sm text-white/70 mb-6">
             <a href="/" className="hover:text-white transition-colors">Home</a> › <a href="/blog" className="hover:text-white transition-colors">Resources</a> › Article
           </nav>
           <p className="text-xs uppercase tracking-widest text-white/70 mb-4">Patient Education</p>
-          <h1 className="font-cormorant text-5xl font-light leading-tight max-w-3xl mx-auto text-center">Travel Health Tips Before You Go</h1>
+          <h1 className="font-cormorant text-5xl font-light leading-tight max-w-3xl">Travel Health Tips Before You Go</h1>
           <p className="mt-6 text-white/80 text-sm">Published November 2026 · 6 min read</p>
         </div>
-      </section>
+      </SplitHero>
 
-      {/* page-image:start */}
-      <div className="max-w-5xl mx-auto px-6 -mt-10 relative z-10">
-        <div className="w-full rounded-2xl overflow-hidden shadow-xl bg-[var(--color-light)]">
-          <img src={"/images/stock/blog-travel-health-tips-before-you-go.jpg"} alt={"A detailed close-up photo of a stethoscope on a clean white background, ideal for health topics."} width={1200} height={627} loading="lazy" className="block w-full h-auto" />
-        </div>
-      </div>
-      {/* page-image:end */}
 
       <article className="bg-white py-20 max-w-3xl mx-auto px-6 text-[var(--color-ink)] leading-loose text-base">
         <p>You have booked the flights, reserved the hotel, and mapped out the sights. Then a fever, a stomach illness, or a lost prescription turns a long-awaited trip into a stressful one. Most travel health problems are preventable, and a little planning weeks before departure goes a long way.</p>

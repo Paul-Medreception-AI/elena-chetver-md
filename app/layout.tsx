@@ -31,6 +31,7 @@ const PRACTICE_LD = {
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 export const metadata: Metadata = {
+  verification: { google: 'cWpOLnA59CuQkz7AXOoO0bd-hNy8aOgN51IDoywKEBA' },
   title: 'Internal Medicine in West Hollywood, CA | Elena Chetver, MD',
   description: 'Dr. Elena Chetver is a board-certified internal medicine physician in West Hollywood, CA, caring for adults for over 40 years. English and Russian spoken. Medicare and major plans accepted.',
   metadataBase: new URL('https://elenachetvermd.com'),
